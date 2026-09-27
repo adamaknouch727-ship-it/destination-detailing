@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Leg es weg. – Gumroad-Bilder</title>
+<style>
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-full-normal.woff2) format("woff2"); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-full-italic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; }
+  @font-face { font-family: "Inter"; src: url(fonts/inter-latin-opsz-normal.woff2) format("woff2"); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url(fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2"); font-weight: 100 800; }
+  :root { --night: #0F1729; --cream: #F4EEE3; --paper: #F7F3EC; --ink: #141925; --sun: #F2703A; --sun-2: #FFB057; --muted: #6B7182; --line: #E0D8CA; }
+  html, body { margin: 0; padding: 0; background: #555; }
+  .cv { width: 2560px; height: 1440px; position: relative; overflow: hidden; margin-bottom: 40px; }
+  .th { width: 1200px; height: 1200px; position: relative; overflow: hidden; }
+  .eyebrow { font-family: "JetBrains Mono", monospace; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+  .dot { color: var(--sun); }
+
+  /* ---- Cover 1: hero ---- */
+  .c1 { background: radial-gradient(1500px 1200px at 72% 45%, #26375F 0%, #16213A 50%, var(--night) 85%); color: var(--cream); }
+  .c1 .left { position: absolute; left: 170px; top: 0; bottom: 0; width: 1180px; display: flex; flex-direction: column; justify-content: center; }
+  .c1 .eyebrow { font-size: 30px; color: var(--sun-2); }
+  .c1 h1 { font-family: "Fraunces", serif; font-size: 236px; line-height: .95; font-weight: 600; letter-spacing: -0.035em; margin: 40px 0 0; font-variation-settings: "SOFT" 50, "WONK" 0; }
+  .c1 .sub { font-family: "Fraunces", serif; font-size: 60px; line-height: 1.25; color: #D6DBE7; margin-top: 44px; max-width: 1080px; }
+  .c1 .chips { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 70px; }
+  .c1 .chips span { font-family: "Inter", sans-serif; font-size: 34px; font-weight: 550; color: var(--cream); border: 2px solid rgba(244,238,227,.35); border-radius: 60px; padding: 16px 34px; }
+  .c1 .chips span.hot { background: var(--sun); border-color: var(--sun); color: #fff; }
+  .stack { position: absolute; right: 190px; top: 150px; width: 1000px; height: 1140px; }
+  .stack img { position: absolute; width: 790px; border-radius: 10px; box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.35); }
+  .stack .b { right: -40px; top: 40px; transform: rotate(7deg); opacity: .96; }
+  .stack .f { left: 20px; top: 0; transform: rotate(-4deg); }
+  .sticker { position: absolute; left: -20px; bottom: 40px; width: 300px; height: 300px; border-radius: 50%; background: var(--sun); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transform: rotate(-10deg); box-shadow: 0 24px 50px rgba(0,0,0,.4); }
+  .sticker b { font-family: "Fraunces", serif; font-size: 96px; line-height: .9; font-weight: 600; }
+  .sticker span { font-family: "Inter", sans-serif; font-size: 30px; font-weight: 650; line-height: 1.2; margin-top: 8px; }
+
+  /* ---- Cover 2: inside ---- */
+  .c2 { background: var(--paper); color: var(--ink); }
+  .c2 .head { position: absolute; left: 150px; right: 150px; top: 120px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .c2 .eyebrow { font-size: 28px; color: #BF4E1E; }
+  .c2 h2 { font-family: "Fraunces", serif; font-size: 128px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; margin: 22px 0 0; }
+  .c2 .lead { font-family: "Fraunces", serif; font-size: 46px; line-height: 1.3; color: #3A4152; max-width: 820px; text-align: right; }
+  .c2 .pages { position: absolute; left: 150px; right: 150px; top: 520px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 44px; }
+  .c2 .pg img { width: 100%; display: block; border-radius: 8px; box-shadow: 0 22px 50px rgba(15,23,41,.22), 0 4px 10px rgba(15,23,41,.12); }
+  .c2 .pg .lb { font-family: "JetBrains Mono", monospace; font-size: 24px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #BF4E1E; margin-top: 30px; }
+  .c2 .pg .tx { font-family: "Fraunces", serif; font-size: 36px; font-weight: 600; margin-top: 8px; line-height: 1.15; }
+  .c2 .strip { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: var(--night); color: var(--cream); display: flex; align-items: center; justify-content: center; gap: 60px; font-family: "Inter", sans-serif; font-size: 34px; font-weight: 550; }
+  .c2 .strip i { width: 12px; height: 12px; border-radius: 50%; background: var(--sun); display: inline-block; }
+
+  /* ---- Cover 3: bonus ---- */
+  .c3 { background: linear-gradient(180deg, #0F1729 0%, #1B2544 40%, #4A3552 72%, #C8603A 92%, #F2A25A 100%); color: #FFF6EC; }
+  .c3 .head { position: absolute; left: 0; right: 0; top: 120px; text-align: center; }
+  .c3 .eyebrow { font-size: 30px; color: var(--sun-2); }
+  .c3 h2 { font-family: "Fraunces", serif; font-size: 118px; font-weight: 600; letter-spacing: -0.03em; margin: 22px 0 0; line-height: 1; }
+  .c3 .lead { font-family: "Fraunces", serif; font-size: 44px; color: #E7E2EA; margin-top: 30px; }
+  .c3 .phones { position: absolute; left: 0; right: 0; top: 560px; display: flex; justify-content: center; gap: 64px; }
+  .c3 .ph { width: 300px; background: #07090D; border-radius: 46px; padding: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+  .c3 .ph img { width: 100%; display: block; border-radius: 36px; }
+  .c3 .ph:nth-child(2), .c3 .ph:nth-child(4) { transform: translateY(40px); }
+
+  /* ---- Thumbnail ---- */
+  .t1 { background: radial-gradient(900px 900px at 50% 38%, #26375F 0%, #16213A 55%, var(--night) 90%); color: var(--cream); text-align: center; }
+  .t1 .time { font-family: "Inter", sans-serif; font-weight: 250; font-size: 230px; letter-spacing: -0.03em; color: #EEF1F8; position: absolute; left: 0; right: 0; top: 150px; line-height: 1; }
+  .t1 h1 { font-family: "Fraunces", serif; font-size: 190px; font-weight: 600; letter-spacing: -0.035em; line-height: .95; position: absolute; left: 0; right: 0; top: 560px; margin: 0; }
+  .t1 .eyebrow { position: absolute; left: 0; right: 0; bottom: 170px; font-size: 38px; color: var(--sun-2); letter-spacing: .14em; }
+</style>
+</head>
+<body>
+
+<div class="cv c1" id="cover-1">
+  <div class="left">
+    <div class="eyebrow">Das 30-Tage-System gegen Handysucht</div>
+    <h1>Leg es weg<span class="dot">.</span></h1>
+    <div class="sub">Für alle, die abends nicht aufhören können zu scrollen.</div>
+    <div class="chips"><span>27 Seiten</span><span>7 · 14 · 30 Tage</span><span>iPhone &amp; Android</span><span class="hot">+ 5 Sperrbildschirme</span></div>
+  </div>
+  <div class="stack">
+    <img class="b" src="../output/gumroad/_pages/page-16.png" alt="">
+    <img class="f" src="../output/gumroad/_pages/page-01.png" alt="">
+    <div class="sticker"><b>30</b><span>Tage.<br>Ein Plan.</span></div>
+  </div>
+</div>
+
+<div class="cv c2" id="cover-2">
+  <div class="head">
+    <div><div class="eyebrow">Das ist drin</div><h2>Ein System<span class="dot">.</span><br>Kein E-Book<span class="dot">.</span></h2></div>
+    <div class="lead">Jeden Tag eine kleine Mission – mit Plan, Übungen und Werkzeugen.</div>
+  </div>
+  <div class="pages">
+    <div class="pg"><img src="../output/gumroad/_pages/page-08.png" alt=""><div class="lb">Kapitel 03</div><div class="tx">Der 20-Minuten-Umbau</div></div>
+    <div class="pg"><img src="../output/gumroad/_pages/page-10.png" alt=""><div class="lb">Kapitel 04</div><div class="tx">Die 5 Gefahrenzonen</div></div>
+    <div class="pg"><img src="../output/gumroad/_pages/page-12.png" alt=""><div class="lb">Kapitel 05</div><div class="tx">Die letzte Stunde</div></div>
+    <div class="pg"><img src="../output/gumroad/_pages/page-13.png" alt=""><div class="lb">Kapitel 06</div><div class="tx">Das Anti-Scroll-Menü</div></div>
+    <div class="pg"><img src="../output/gumroad/_pages/page-15.png" alt=""><div class="lb">Kapitel 07</div><div class="tx">Der 30-Tage-Plan</div></div>
+    <div class="pg"><img src="../output/gumroad/_pages/page-21.png" alt=""><div class="lb">Kapitel 10</div><div class="tx">Tracker &amp; Karten</div></div>
+  </div>
+  <div class="strip"><span>Selbsttest</span><i></i><span>Wenn-dann-Pläne</span><i></i><span>Rückfall-Plan</span><i></i><span>Paar- &amp; Familienmodus</span><i></i><span>Vertrag mit dir selbst</span></div>
+</div>
+
+<div class="cv c3" id="cover-3">
+  <div class="head">
+    <div class="eyebrow">Bonus</div>
+    <h2>5 Sperrbildschirme<span class="dot">.</span></h2>
+    <div class="lead">Jedes Mal, wenn du aus Gewohnheit entsperrst, stellt dein Handy dir eine Frage zurück.</div>
+  </div>
+  <div class="phones">
+    <div class="ph"><img src="../output/bonus/Sperrbildschirm-1.png" alt=""></div>
+    <div class="ph"><img src="../output/bonus/Sperrbildschirm-2.png" alt=""></div>
+    <div class="ph"><img src="../output/bonus/Sperrbildschirm-3.png" alt=""></div>
+    <div class="ph"><img src="../output/bonus/Sperrbildschirm-4.png" alt=""></div>
+    <div class="ph"><img src="../output/bonus/Sperrbildschirm-5.png" alt=""></div>
+  </div>
+</div>
+
+<div class="th t1" id="thumbnail">
+  <div class="time">00:47</div>
+  <h1>Leg es weg<span class="dot">.</span></h1>
+  <div class="eyebrow">30-Tage-System gegen Handysucht</div>
+</div>
+
+</body>
+</html>
