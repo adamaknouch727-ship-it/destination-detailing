@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Leg es weg. – TikTok-Slides</title>
+<style>
+  @font-face { font-family: "Inter"; src: url(../src/fonts/inter-latin-opsz-normal.woff2) format("woff2"); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: "Fraunces"; src: url(../src/fonts/fraunces-latin-full-normal.woff2) format("woff2"); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: "JetBrains Mono"; src: url(../src/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2"); font-weight: 100 800; }
+  @font-face { font-family: "Caveat"; src: url(../src/fonts/caveat-latin-700-normal.woff2) format("woff2"); font-weight: 700; }
+  html, body { margin: 0; padding: 0; background: #333; }
+  * { box-sizing: border-box; }
+
+  .slide { width: 1080px; height: 1920px; position: relative; overflow: hidden; background: #0F1729; color: #fff;
+           font-family: "Inter", "Noto Color Emoji", sans-serif; margin-bottom: 30px; }
+  .bg { position: absolute; inset: -40px; background-size: cover; background-position: var(--pos, 50% 50%);
+        transform: scale(var(--zoom, 1)); transform-origin: var(--pos, 50% 50%); filter: var(--filter, none); }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.50) 0%, rgba(0,0,0,.34) 30%, rgba(0,0,0,.40) 62%, rgba(0,0,0,.62) 100%); }
+  .shade.soft { background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.18) 40%, rgba(0,0,0,.30) 70%, rgba(0,0,0,.55) 100%); }
+  .body { position: absolute; left: 84px; right: 84px; top: 220px; bottom: 440px; display: flex; flex-direction: column;
+          justify-content: center; align-items: center; text-align: center; gap: 44px; }
+  .t { font-size: 46px; line-height: 1.36; font-weight: 600; letter-spacing: -0.005em; white-space: pre-line;
+       text-shadow: 0 2px 3px rgba(0,0,0,.6), 0 0 26px rgba(0,0,0,.5); }
+  .t.sm { font-size: 42px; }
+  .t.panel { background: rgba(8,10,16,.52); border-radius: 30px; padding: 30px 36px; }
+  .q { font-size: 42px; line-height: 1.32; font-weight: 700; color: #111; background: #fff; border-radius: 22px; padding: 22px 30px; text-shadow: none; }
+
+  /* Hook (TikTok text-with-background style) */
+  .tagline { position: absolute; top: 210px; left: 0; right: 0; text-align: center; font-size: 30px; font-weight: 600; letter-spacing: .03em;
+             color: rgba(255,255,255,.88); text-shadow: 0 1px 8px rgba(0,0,0,.7); }
+  .h { font-size: 66px; line-height: 1.58; font-weight: 750; letter-spacing: -0.01em; }
+  .h span { background: #fff; color: #111; padding: 6px 24px 8px; border-radius: 18px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+  /* Lock screen */
+  .lockwrap { text-align: center; }
+  .lockwrap .day { font-size: 32px; font-weight: 500; color: rgba(255,255,255,.85); }
+  .lockwrap .time { font-size: 150px; font-weight: 250; letter-spacing: -0.03em; line-height: 1; margin-top: 4px; color: #F1F4FA; }
+  .notif { width: 900px; margin-top: 34px; text-align: left; display: grid; grid-template-columns: 92px 1fr; gap: 26px;
+           background: rgba(255,255,255,.16); border: 1.5px solid rgba(255,255,255,.2); border-radius: 44px; padding: 32px 36px; }
+  .notif .app { width: 92px; height: 92px; border-radius: 22px; background: linear-gradient(145deg, #FFB057, #F2703A); display: flex; align-items: center; justify-content: center; }
+  .notif .app svg { width: 50px; height: 50px; }
+  .notif .hd { display: flex; justify-content: space-between; font-size: 25px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: rgba(235,239,247,.8); }
+  .notif .tt { font-size: 36px; font-weight: 700; margin-top: 6px; }
+  .notif .bd { font-size: 34px; line-height: 1.35; color: rgba(245,247,252,.92); margin-top: 4px; }
+
+  /* Chat */
+  .chat { width: 900px; background: #111621; border-radius: 44px; overflow: hidden; text-align: left; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .chat .top { display: flex; align-items: center; gap: 22px; padding: 26px 32px; background: #1A2130; }
+  .chat .av { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(145deg, #6D7AA3, #3C4766); display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 700; }
+  .chat .nm { font-size: 34px; font-weight: 700; }
+  .chat .sb { font-size: 26px; color: #9AA3B8; margin-top: 2px; }
+  .chat .msgs { padding: 30px 28px 34px; display: flex; flex-direction: column; gap: 16px; }
+  .chat .b { max-width: 78%; font-size: 33px; line-height: 1.34; padding: 18px 24px; border-radius: 28px; }
+  .chat .them { align-self: flex-start; background: #262E3F; border-bottom-left-radius: 10px; }
+  .chat .me { align-self: flex-end; background: #F2703A; border-bottom-right-radius: 10px; }
+  .chat .file { display: grid; grid-template-columns: 76px 1fr; gap: 20px; align-items: center; padding: 18px 22px; }
+  .chat .file .ic { width: 76px; height: 92px; border-radius: 12px; background: #E5484D; color: #fff; font-size: 22px; font-weight: 800; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; letter-spacing: .05em; }
+  .chat .file .fn { font-size: 31px; font-weight: 650; }
+  .chat .file .fm { font-size: 25px; color: #9AA3B8; margin-top: 4px; }
+
+  /* Notes */
+  .notes { width: 880px; background: #FFFCF2; color: #1D1D1F; border-radius: 40px; padding: 44px 56px 50px; text-align: left; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .notes .app { font-size: 26px; font-weight: 700; color: #D9A300; letter-spacing: .02em; }
+  .notes .ti { font-size: 46px; font-weight: 800; margin: 10px 0 18px; }
+  .notes .ln { font-family: "Caveat", cursive; font-size: 70px; line-height: 1.25; border-bottom: 2px solid #EDE4CF; padding: 6px 0 2px; }
+  .notes .ln.res { color: #BF4E1E; }
+  .notes .ln.res span { background: linear-gradient(transparent 55%, #FFE27A 55%, #FFE27A 92%, transparent 92%); }
+
+  /* PDF page */
+  .pagebox { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 40px 90px rgba(0,0,0,.6); transform: rotate(-1.5deg); }
+  .pagebox img { display: block; }
+
+  /* Mockup */
+  .mstack { position: relative; width: 820px; height: 900px; }
+  .mstack img { position: absolute; width: 600px; border-radius: 8px; box-shadow: 0 40px 90px rgba(0,0,0,.6), 0 8px 20px rgba(0,0,0,.35); }
+  .mstack .b { right: 10px; top: 40px; transform: rotate(7deg); }
+  .mstack .f { left: 30px; top: 0; transform: rotate(-4deg); }
+  .big { font-size: 54px; line-height: 1.3; font-weight: 750; white-space: pre-line; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+
+  /* Card */
+  .card { width: 880px; background: #F7F3EC; color: #141925; border-radius: 40px; padding: 56px 60px; text-align: left; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .card .ey { font-family: "JetBrains Mono", monospace; font-size: 26px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #BF4E1E; }
+  .card .cq { font-family: "Fraunces", serif; font-size: 68px; line-height: 1.12; font-weight: 600; margin-top: 18px; letter-spacing: -0.015em; }
+
+  /* Special backgrounds */
+  .grad-sunrise { position: absolute; inset: 0; background: linear-gradient(180deg, #0F1729 0%, #1B2544 34%, #4A3552 62%, #C8603A 86%, #F2A25A 100%); }
+  .grad-sunrise::after { content: ""; position: absolute; left: 50%; bottom: -380px; width: 1100px; height: 1100px; margin-left: -550px; border-radius: 50%;
+                         background: radial-gradient(circle, rgba(255,214,150,.55) 0%, rgba(255,170,90,.18) 45%, rgba(255,170,90,0) 70%); }
+  .grad-night { position: absolute; inset: 0; background: radial-gradient(1200px 1000px at 50% 40%, #1A2440 0%, #0D1322 70%, #070A12 100%); }
+  .grad-night i { position: absolute; border-radius: 50%; filter: blur(30px); opacity: .55; }
+  .grad-navy { position: absolute; inset: 0; background: radial-gradient(1300px 1200px at 50% 38%, #26375F 0%, #16213A 55%, #0F1729 100%); }
+  .grad-warm { position: absolute; inset: 0; background: radial-gradient(1200px 1100px at 50% 40%, #6B4A33 0%, #3B2A20 60%, #1E1611 100%); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const HOURGLASS = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12M6 22h12M17 2v4.2a2 2 0 0 1-.6 1.4L12 12 7.6 7.6A2 2 0 0 1 7 6.2V2M7 22v-4.2a2 2 0 0 1 .6-1.4L12 12l4.4 4.4a2 2 0 0 1 .6 1.4V22"/></svg>';
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const bgPhoto = (s, extraFilter) => {
+    const f = [s.filter || '', s.blur ? `blur(${s.blur}px) brightness(.8)` : '', extraFilter || ''].join(' ').trim() || 'none';
+    return `<div class="bg" style="background-image:url(assets/${s.img}.webp);--pos:${s.pos || '50% 50%'};--zoom:${s.zoom || 1};--filter:${f}"></div>`;
+  };
+  const pageImg = n => `_pages/page-${String(n).padStart(2, '0')}.png`;
+
+  function slideHTML(s) {
+    switch (s.type) {
+      case 'hook':
+        return bgPhoto(s) + `<div class="shade soft"></div><div class="tagline">Fiktive Geschichte</div>
+          <div class="body"><div class="h">${s.text.split('\n').map(l => `<span>${esc(l)}</span>`).join('<br>')}</div></div>`;
+      case 'photo':
+        return bgPhoto(s) + `<div class="shade"></div><div class="body"><div class="t panel">${esc(s.text)}</div>${s.question ? `<div class="q">${esc(s.question)}</div>` : ''}</div>`;
+      case 'lock':
+        return bgPhoto(s, 'blur(22px) brightness(.55)') + `<div class="shade soft"></div><div class="body" style="gap:40px">
+          <div class="t sm">${esc(s.textTop)}</div>
+          <div class="lockwrap"><div class="day">${esc(s.day)}</div><div class="time">${esc(s.time)}</div>
+            <div class="notif"><div class="app">${HOURGLASS}</div><div><div class="hd"><span>Bildschirmzeit</span><span>jetzt</span></div>
+            <div class="tt">${esc(s.notifTitle)}</div><div class="bd">${esc(s.notifBody)}</div></div></div></div>
+          <div class="t sm">${esc(s.textBottom)}</div></div>`;
+      case 'chat': {
+        const msgs = s.messages.map(m => m.file
+          ? `<div class="b them file"><div class="ic">PDF</div><div><div class="fn">Leg-es-weg.pdf</div><div class="fm">27 Seiten · PDF</div></div></div>`
+          : `<div class="b ${m.from}">${esc(m.text)}</div>`).join('');
+        return bgPhoto(s, 'blur(24px) brightness(.5)') + `<div class="shade soft"></div><div class="body" style="gap:40px">
+          <div class="t sm">${esc(s.textTop)}</div>
+          <div class="chat"><div class="top"><div class="av">${esc(s.chatName[0])}</div><div><div class="nm">${esc(s.chatName)}</div><div class="sb">${esc(s.chatSub)}</div></div></div><div class="msgs">${msgs}</div></div>
+          ${s.textBottom ? `<div class="t sm">${esc(s.textBottom)}</div>` : ''}</div>`;
+      }
+      case 'notes':
+        return bgPhoto(s, 'blur(24px) brightness(.5)') + `<div class="shade soft"></div><div class="body" style="gap:48px">
+          <div class="notes"><div class="app">‹ Notizen</div><div class="ti">${esc(s.notesTitle)}</div>
+          ${s.notesLines.map((l, i) => `<div class="ln${i === s.notesLines.length - 1 ? ' res' : ''}"><span>${esc(l)}</span></div>`).join('')}</div>
+          <div class="t">${esc(s.textBottom)}</div></div>`;
+      case 'page': {
+        const box = s.focus
+          ? `<div class="pagebox" style="width:860px;height:1080px"><img src="${pageImg(s.page)}" style="width:1720px;margin-left:${s.focus === 'right' ? -860 : 0}px;margin-top:-470px"></div>`
+          : `<div class="pagebox" style="width:790px"><img src="${pageImg(s.page)}" style="width:790px"></div>`;
+        return `<div class="grad-navy"></div><div class="body" style="gap:50px;top:200px;bottom:380px"><div class="t">${esc(s.textTop)}</div>${box}</div>`;
+      }
+      case 'mockup':
+        return `<div class="grad-navy"></div><div class="body" style="gap:56px;top:200px;bottom:380px"><div class="t">${esc(s.textTop)}</div>
+          <div class="mstack"><img class="b" src="${pageImg(16)}"><img class="f" src="${pageImg(1)}"></div>
+          <div class="big">${esc(s.text)}</div></div>`;
+      case 'card':
+        return `<div class="grad-warm"></div><div class="body" style="gap:52px"><div class="card"><div class="ey">${esc(s.cardEyebrow)}</div><div class="cq">${esc(s.cardQ)}</div></div>
+          <div class="t">${esc(s.text)}</div></div>`;
+      case 'sunrise':
+        return `<div class="grad-sunrise"></div><div class="body"><div class="t">${esc(s.text)}</div>${s.question ? `<div class="q">${esc(s.question)}</div>` : ''}</div>`;
+      case 'night':
+        return `<div class="grad-night">
+            <i style="left:120px;top:380px;width:180px;height:180px;background:#F2A25A"></i>
+            <i style="left:760px;top:300px;width:140px;height:140px;background:#E5484D"></i>
+            <i style="left:520px;top:1320px;width:220px;height:220px;background:#FFD27A"></i>
+            <i style="left:80px;top:1500px;width:150px;height:150px;background:#7AA2FF"></i>
+          </div><div class="shade soft"></div><div class="body"><div class="t">${esc(s.text)}</div></div>`;
+    }
+    return '';
+  }
+
+  window.renderAll = function (posts) {
+    const root = document.getElementById('root');
+    root.innerHTML = posts.map((p, pi) => p.slides.map((s, si) =>
+      `<section class="slide" data-post="${pi}" data-slide="${si}">${slideHTML(s)}</section>`).join('')).join('');
+  };
+</script>
+</body>
+</html>

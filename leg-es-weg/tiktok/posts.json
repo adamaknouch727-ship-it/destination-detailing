@@ -1,0 +1,306 @@
+[
+  {
+    "folder": "01_das-bild-auf-dem-ich-kein-gesicht-hatte",
+    "title": "DAS BILD, AUF DEM ICH KEIN GESICHT HATTE",
+    "caption": "Fiktive Geschichte. Wie viele Stunden zeigt eure Bildschirmzeit gerade? Ehrlich 👇\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#handysucht #bildschirmzeit #mamaleben #familie #fürdich\nWerbung",
+    "captionShort": "mein sohn hat unsere familie gemalt und mich ohne gesicht. nur ein schwarzes rechteck. ich hab gefragt was das ist und er hat gesagt: das ist dein handy mama, du guckst doch immer da rein #handysucht #mamaleben #bildschirmzeit",
+    "slides": [
+      {
+        "type": "hook",
+        "img": "o_crayons_paper_table",
+        "text": "Mein Sohn hat unsere\nFamilie gemalt.\nMich hat er ohne\nGesicht gemalt."
+      },
+      {
+        "type": "photo",
+        "img": "o_hallway_shoes",
+        "text": "Ich bin 34, wohne in Dortmund, zwei Kinder, Vollzeit im Büro. Abends bin ich so müde, dass das Handy das Einzige ist, was nichts von mir will. Dachte ich. Im Kindergarten sollten die Kinder ihre Familie malen. Die Erzieherin hat mir das Bild beim Abholen gegeben und gelächelt. Ich hab nicht gelächelt."
+      },
+      {
+        "type": "photo",
+        "img": "o_crayons_paper_table",
+        "zoom": 1.35,
+        "pos": "30% 35%",
+        "text": "Papa, groß, mit Bart. Seine Schwester mit zwei Zöpfen. Er selbst mit Fußball. Und ich: ein Körper, zwei Arme, und da, wo mein Gesicht sein sollte, ein schwarzes Rechteck. Ich hab gefragt, was das ist. Er hat ganz normal gesagt: Das ist dein Handy, Mama. Du guckst doch immer da rein."
+      },
+      {
+        "type": "lock",
+        "img": "o_phone_sofa_glow",
+        "day": "Montag",
+        "time": "21:47",
+        "notifTitle": "Dein Wochenbericht",
+        "notifBody": "Durchschnittlich 5 Std. 12 Min. pro Tag – 18 % mehr als in der Vorwoche.",
+        "textTop": "Ich wollte mich verteidigen. Ich arbeite doch den ganzen Tag. Ich brauch doch auch mal Pause. Dann hab ich zum ersten Mal in meine Bildschirmzeit geschaut.",
+        "textBottom": "Das meiste davon zwischen 18 und 21 Uhr. Genau die Zeit, in der er wach ist."
+      },
+      {
+        "type": "photo",
+        "img": "o_kids_room_night_door",
+        "text": "Nach Kita und Arbeit bleiben mir mit ihm vielleicht zwei Stunden am Tag. Und von diesen zwei Stunden hab ich über eine Stunde auf ein Display geschaut. An dem Abend stand ich vor seiner Tür und hab mich gefragt, woran er sich später erinnern wird. An mich? Oder an das Rechteck?"
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_sofa_glow",
+        "text": "Ich hab es mit Willenskraft versucht. Handy weg, Punkt. Hat drei Tage gehalten. Am vierten Abend lag es wieder neben mir. Er hat mir von seinem Tag erzählt, und ich hab „mhm“ gesagt, ohne hochzuschauen. Da hat er einfach aufgehört zu erzählen. Das war schlimmer als jeder Streit."
+      },
+      {
+        "type": "chat",
+        "img": "o_phone_sofa_glow",
+        "chatName": "Lena",
+        "chatSub": "Schwester",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Lies das. Nicht heute Nacht um eins. Jetzt 😅"
+          },
+          {
+            "from": "them",
+            "file": true
+          },
+          {
+            "from": "me",
+            "text": "Noch so ein Ratgeber? 🙄"
+          },
+          {
+            "from": "them",
+            "text": "Lies nur die erste Seite."
+          }
+        ],
+        "textTop": "Meine Schwester hat mir dann ein PDF geschickt.",
+        "textBottom": "Auf der ersten Seite stand: Du bist nicht schwach. Die Apps auf deinem Handy werden gebaut, damit du bleibst. Du brauchst ein besseres System."
+      },
+      {
+        "type": "photo",
+        "img": "o_basket_phones_hallway",
+        "text": "Ein Satz hat mich nicht mehr losgelassen: Kinder machen nach, was ihr tut, nicht, was ihr sagt. Seitdem steht bei uns ein Korb im Flur. Um 18 Uhr kommen alle Handys rein. Meins zuerst. Mein Mann hat erst gelacht. Dann hat er seins dazugelegt."
+      },
+      {
+        "type": "photo",
+        "img": "o_hallway_shoes",
+        "zoom": 1.3,
+        "pos": "50% 70%",
+        "text": "Die ersten Abende waren komisch. Ich hab ständig nach einem Handy gegriffen, das gar nicht da war. Dann haben wir ein Puzzle angefangen, 500 Teile, ein Leuchtturm. Er hat mir jedes Teil gezeigt, das er gefunden hat. Jedes einzelne. Und ich hab jedes Mal hingeschaut."
+      },
+      {
+        "type": "photo",
+        "img": "o_crayons_paper_table",
+        "zoom": 1.2,
+        "pos": "60% 75%",
+        "text": "Letzte Woche hat er wieder ein Bild gemalt. Ohne Auftrag, einfach so. Wir zwei am Tisch, vor uns ein riesiger Leuchtturm. Ich hab ein Gesicht. Ich lache. Das Bild hängt jetzt im Flur, direkt über dem Korb.",
+        "question": "Sagt mal ehrlich: Wie viele Stunden zeigt eure Bildschirmzeit gerade? 👇"
+      },
+      {
+        "type": "page",
+        "page": 20,
+        "textTop": "Die Seite mit dem Handy-Korb 🧺",
+        "focus": "left"
+      },
+      {
+        "type": "mockup",
+        "textTop": "Meine Schwester meinte, ich soll es teilen.",
+        "text": "Es heißt „Leg es weg.“\nDer Link steht im ersten Kommentar."
+      }
+    ]
+  },
+  {
+    "folder": "02_vier-stunden-an-die-ich-mich-nicht-erinnere",
+    "title": "VIER STUNDEN, AN DIE ICH MICH NICHT ERINNERE",
+    "caption": "Fiktive Geschichte. Wie viele Stunden wart ihr gestern am Handy? Ehrlich 👇\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#handysucht #bildschirmzeit #studium #doomscrolling #fürdich\nWerbung",
+    "captionShort": "meine oma hat mich gefragt was ich gestern abend gemacht hab und ich wusste es nicht. ich war vier stunden am handy und kann mich an kein einziges video erinnern #handysucht #studium #bildschirmzeit",
+    "slides": [
+      {
+        "type": "hook",
+        "img": "o_phone_nightstand_glow",
+        "text": "Meine Oma hat mich gefragt, was ich gestern Abend gemacht hab.\nIch wusste es nicht."
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_nightstand_glow",
+        "blur": 14,
+        "text": "Ich bin 23, studiere Pflege in Leipzig und arbeite nebenbei im Café. Mein Tag ist voll. Deshalb gehört der Abend mir, hab ich mir immer gesagt. Um 22 Uhr leg ich mich ins Bett, nur noch kurz aufs Handy. Um zwei bin ich meistens immer noch wach."
+      },
+      {
+        "type": "photo",
+        "img": "o_crayons_paper_table",
+        "blur": 16,
+        "text": "Sonntags esse ich bei meiner Oma. Sie ist 81 und fragt jede Woche dasselbe: Kind, was hast du diese Woche Schönes gemacht? Letzten Sonntag hab ich angefangen zu erzählen und gemerkt, dass ich nichts erzählen kann. Nicht, weil nichts passiert ist. Sondern weil ich nichts davon mitbekommen hab."
+      },
+      {
+        "type": "lock",
+        "img": "o_phone_nightstand_glow",
+        "day": "Sonntag",
+        "time": "18:32",
+        "notifTitle": "Dein Wochenbericht",
+        "notifBody": "Durchschnittlich 4 Std. 38 Min. pro Tag.",
+        "textTop": "Auf dem Heimweg hab ich meine Bildschirmzeit geöffnet.",
+        "textBottom": "Ich hab versucht, mich an ein einziges Video von gestern zu erinnern. Eins. Mir ist keins eingefallen."
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_nightstand_glow",
+        "zoom": 1.25,
+        "pos": "55% 45%",
+        "text": "Drei Wochen später war die Anatomie-Prüfung. Ich hab in diesen drei Wochen vielleicht an fünf Abenden gelernt. Nicht, weil ich faul bin. Sondern weil ich mich jeden Abend „nur kurz“ ausruhen wollte. Ich hab mit 4,0 bestanden. Knapp. Und ich hab mich geschämt."
+      },
+      {
+        "type": "chat",
+        "img": "o_phone_nightstand_glow",
+        "chatName": "Mira",
+        "chatSub": "aus dem Kurs",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Hast du 20 Minuten? Lies Seite 7 😳"
+          },
+          {
+            "from": "them",
+            "file": true
+          },
+          {
+            "from": "them",
+            "text": "Rechne das mal für dich aus. Ehrlich."
+          },
+          {
+            "from": "me",
+            "text": "Okay … mach ich heute Abend"
+          }
+        ],
+        "textTop": "Eine Freundin aus meinem Kurs hat mir ein PDF geschickt."
+      },
+      {
+        "type": "notes",
+        "img": "o_phone_nightstand_glow",
+        "notesTitle": "Meine Rechnung",
+        "notesLines": [
+          "4 Std. 38 Min. pro Tag",
+          "× 365 Tage",
+          "÷ 24 Stunden",
+          "= 70 Tage im Jahr 😶"
+        ],
+        "textBottom": "Siebzig Tage. Mehr als zwei Monate. Jedes Jahr. In einem Feed, an den ich mich nicht erinnere."
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_nightstand_glow",
+        "filter": "grayscale(1)",
+        "text": "Das PDF hat mir nicht gesagt, dass ich schwach bin. Da stand: Willenskraft ist wie ein Akku. Abends ist er leer. Also bau dein Handy so um, dass du sie kaum brauchst. Ich hab es an einem Abend gemacht, in zwanzig Minuten. Mitteilungen aus. Graustufen an. Die Apps weg vom Startbildschirm."
+      },
+      {
+        "type": "photo",
+        "img": "o_basket_phones_hallway",
+        "text": "Die schwerste Regel war der Ladeplatz. Mein Handy schläft jetzt im Flur, in einem Korb unter dem Schlüsselbrett. Die ersten zwei Nächte lag ich wach und hatte Angst, etwas zu verpassen. In der dritten Nacht hab ich geschlafen. Acht Stunden. Zum ersten Mal seit dem Abi."
+      },
+      {
+        "type": "sunrise",
+        "text": "Tag 21. Bildschirmzeit: 1 Stunde 50. Ich lerne abends wieder. Und am Sonntag hat meine Oma gefragt, was ich Schönes gemacht hab. Ich hab ihr von dem Buch erzählt, das ich gerade lese. Sie hat so gelacht, dass ihr Tee kalt geworden ist.",
+        "question": "Wie viele Stunden wart ihr gestern am Handy? Ehrlich 👇"
+      },
+      {
+        "type": "page",
+        "page": 7,
+        "textTop": "Die Rechnung auf Seite 7 🗓️"
+      },
+      {
+        "type": "mockup",
+        "textTop": "Falls du dich wiedererkennst:",
+        "text": "Es heißt „Leg es weg.“\nDer Link steht im ersten Kommentar."
+      }
+    ]
+  },
+  {
+    "folder": "03_was-mein-mann-mir-auf-dem-sofa-erzaehlt-hat",
+    "title": "WAS MEIN MANN MIR AUF DEM SOFA ERZÄHLT HAT",
+    "caption": "Fiktive Geschichte. Wann habt ihr eurem Partner zuletzt ohne Handy in der Hand zugehört? Ehrlich 👇\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#handysucht #ehe #beziehung #phubbing #fürdich\nWerbung",
+    "captionShort": "mein mann hat mir erzählt dass sein vater krank ist. auf dem sofa. ich hab gesagt oh nein echt und weitergescrollt. erfahren hab ich es erst drei wochen später im krankenhaus #handysucht #ehe #beziehung",
+    "slides": [
+      {
+        "type": "hook",
+        "img": "o_phone_sofa_glow",
+        "text": "Mein Mann hat mir erzählt, dass sein Vater krank ist.\nIch hab es nicht mitbekommen."
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_sofa_glow",
+        "blur": 14,
+        "text": "Wir sind seit sechs Jahren verheiratet und wohnen in Hannover. Unsere Abende sahen immer gleich aus: Essen, Sofa, jeder sein Handy. Nebeneinander, Knie an Knie. Ich dachte, das ist Nähe. Zusammen sein, ohne viel reden zu müssen."
+      },
+      {
+        "type": "photo",
+        "img": "o_kids_room_night_door",
+        "blur": 16,
+        "text": "Vor zwei Wochen standen wir im Krankenhaus. Seine Mutter hat mich umarmt und gesagt: Gut, dass ihr da seid. Seit er es euch erzählt hat, schläft er kaum. Ich hab genickt, als wüsste ich das. Ich wusste gar nichts. Was sein Vater hat, hab ich erst auf dem Flur erfahren."
+      },
+      {
+        "type": "night",
+        "text": "Im Auto hab ich ihn gefragt, warum er mir nichts gesagt hat. Er hat lange nach vorne geschaut. Dann hat er gesagt: Hab ich. An einem Dienstag. Auf dem Sofa. Du hast gesagt: Oh nein, echt? Und dann hast du weitergescrollt."
+      },
+      {
+        "type": "lock",
+        "img": "o_phone_sofa_glow",
+        "day": "Dienstag",
+        "time": "23:05",
+        "notifTitle": "Bildschirmzeit heute",
+        "notifBody": "5 Std. 3 Min. am Handy.",
+        "textTop": "Ich hab mich an nichts erinnert. Nicht an den Dienstag, nicht an den Satz, nicht an sein Gesicht. Zu Hause hab ich meine Bildschirmzeit geöffnet.",
+        "textBottom": "Irgendwo in diesen fünf Stunden hat mein Mann mir das Schwerste seines Jahres erzählt."
+      },
+      {
+        "type": "photo",
+        "img": "o_phone_nightstand_glow",
+        "text": "Ich hab die halbe Nacht wach gelegen. Ich war nicht wütend auf ihn. Ich war wütend auf mich. Und ich hatte Angst, weil ich wusste: Morgen Abend sitze ich wieder auf dem Sofa, mit dem Handy in der Hand. Einfach aus Gewohnheit."
+      },
+      {
+        "type": "chat",
+        "img": "o_phone_nightstand_glow",
+        "chatName": "Sarah",
+        "chatSub": "Kollegin",
+        "messages": [
+          {
+            "from": "them",
+            "text": "Kapitel 9. Macht das zusammen 🤍"
+          },
+          {
+            "from": "them",
+            "file": true
+          },
+          {
+            "from": "me",
+            "text": "Was ist denn Phubbing? 😅"
+          },
+          {
+            "from": "them",
+            "text": "Lies. Du wirst dich wiedererkennen."
+          }
+        ],
+        "textTop": "Eine Kollegin hat mir ein PDF gezeigt, das sie mit ihrem Mann macht.",
+        "textBottom": "Phubbing heißt: aufs Handy schauen, während jemand mit einem spricht. Fast jeder macht es. Und fast jeder spürt es, wenn der andere es tut."
+      },
+      {
+        "type": "photo",
+        "img": "o_basket_phones_hallway",
+        "text": "Wir haben es zusammen angefangen. Um 20:30 Uhr kommen beide Handys in einen Korb im Flur. Am ersten Abend saßen wir auf dem Sofa und wussten nicht, was wir sagen sollen. Wie zwei Fremde, nach sechs Jahren Ehe. Dann hab ich die erste der sechs Fragen vorgelesen."
+      },
+      {
+        "type": "card",
+        "cardEyebrow": "Frage 1 von 6",
+        "cardQ": "Was war heute dein schönster Moment?",
+        "text": "Er hat eine Weile überlegt und gesagt: Jetzt gerade. Dann hat er mir alles erzählt. Die Diagnose. Die Angst. Dass er nachts Videos schaut, damit er nicht nachdenken muss. Genau wie ich. Wir haben bis eins geredet. Ohne ein einziges Display."
+      },
+      {
+        "type": "sunrise",
+        "text": "Seinem Vater geht es besser, er ist in der Reha. Wir gehen jetzt jeden Abend nach dem Essen eine Runde spazieren. Die Handys bleiben im Korb. Ich höre wieder zu. Richtig.",
+        "question": "Sagt mal ehrlich: Wann habt ihr eurem Partner zuletzt ohne Handy in der Hand zugehört? 👇"
+      },
+      {
+        "type": "page",
+        "page": 20,
+        "focus": "right",
+        "textTop": "Die sechs Fragen, die unsere Abende verändert haben ❤️"
+      },
+      {
+        "type": "mockup",
+        "textTop": "Kapitel 9 ist für Paare.",
+        "text": "Es heißt „Leg es weg.“\nDer Link steht im ersten Kommentar."
+      }
+    ]
+  }
+]
