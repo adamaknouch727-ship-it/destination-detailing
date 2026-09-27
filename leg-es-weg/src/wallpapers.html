@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Leg es weg. – Sperrbildschirme</title>
+<style>
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-full-normal.woff2) format("woff2"); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: "Fraunces"; src: url(fonts/fraunces-latin-full-italic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; }
+  @font-face { font-family: "JetBrains Mono"; src: url(fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2"); font-weight: 100 800; }
+  html, body { margin: 0; padding: 0; background: #000; }
+  /* 1290 x 2796 = iPhone Pro Max; text sits between clock (top) and quick actions (bottom) */
+  .wp { width: 1290px; height: 2796px; position: relative; overflow: hidden; font-family: "Fraunces", serif; }
+  .wp .txt { position: absolute; left: 130px; right: 130px; top: 1330px; transform: translateY(-50%); text-align: center; font-size: 132px; line-height: 1.08; font-weight: 600; letter-spacing: -0.02em; }
+  .wp .txt em { font-style: italic; font-weight: 400; }
+  .wp .brand { position: absolute; left: 0; right: 0; bottom: 470px; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 34px; letter-spacing: .3em; text-transform: uppercase; opacity: .6; }
+  .w1 { background: radial-gradient(900px 900px at 50% 48%, #24345C 0%, #16213A 55%, #0F1729 100%); color: #F4EEE3; }
+  .w1 .dot { color: #F2703A; }
+  .w2 { background: #F4EEE3; color: #141925; }
+  .w2 .dot { color: #F2703A; }
+  .w3 { background: linear-gradient(180deg, #0F1729 0%, #1B2544 42%, #4A3552 70%, #C8603A 90%, #F2A25A 100%); color: #FFF6EC; }
+  .w4 { background: #0B0D12; color: #EDEFF4; }
+  .w4 .dot { color: #F2703A; }
+  .w5 { background: linear-gradient(160deg, #F58A4F 0%, #F2703A 55%, #D9562A 100%); color: #0F1729; }
+</style>
+</head>
+<body>
+  <div class="wp w1"><div class="txt">Wolltest du wirklich hierher<span class="dot">?</span></div><div class="brand">Leg es weg.</div></div>
+  <div class="wp w2"><div class="txt">Erst leben<span class="dot">.</span><br><em>Dann scrollen.</em></div><div class="brand">Leg es weg.</div></div>
+  <div class="wp w3"><div class="txt">Nur kurz?<br><em>Das sagst du jedes Mal.</em></div><div class="brand">Leg es weg.</div></div>
+  <div class="wp w4"><div class="txt">Wofür hast du es gerade entsperrt<span class="dot">?</span></div><div class="brand">Leg es weg.</div></div>
+  <div class="wp w5"><div class="txt">Leg es weg.<br><em>Der Abend gehört dir.</em></div><div class="brand" style="opacity:.55">Leg es weg.</div></div>
+</body>
+</html>
