@@ -16,7 +16,8 @@ const tk = path.join(root, 'tiktok');
 const data = JSON.parse(fs.readFileSync(path.join(tk, 'posts2.json'), 'utf8'));
 const only = process.argv.slice(2);
 const posts = only.length ? data.posts.filter(p => only.includes(p.folder)) : data.posts;
-const PIN = '📌 Der komplette 30-Tage-Plan „Leg es weg.“: aminarahim.gumroad.com/l/legesweg';
+// TikTok blocks comments that contain a URL, so the pinned comment only points to the profile link.
+const PIN = '📌 Das PDF heißt „Leg es weg.“ – der Link ist in meinem Profil ❤️';
 
 const browser = await playwright.chromium.launch();
 
