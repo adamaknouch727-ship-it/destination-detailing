@@ -1,0 +1,545 @@
+{
+  "annotations": {
+    "v3-p02": {
+      "page": 2,
+      "highlight": [
+        "Du bist nicht allein, und du bist nicht schwach."
+      ],
+      "underline": [
+        "Gegen so ein System kommst du mit Willenskraft allein nicht an."
+      ],
+      "box": [
+        "Du brauchst ein besseres System."
+      ],
+      "notes": [
+        {
+          "text": "Tag 3 – wieder verloren\nTag 4 – wieder verloren",
+          "x": 60,
+          "y": 4.2,
+          "r": -3,
+          "size": 27
+        },
+        {
+          "text": "nochmal lesen",
+          "x": 66,
+          "y": 77.5,
+          "r": -5,
+          "size": 28
+        }
+      ]
+    },
+    "v4-p20": {
+      "page": 20,
+      "highlight": [
+        "Was war heute dein schönster Moment?"
+      ],
+      "underline": [
+        "Alle Handys kommen hinein – auch die der Erwachsenen."
+      ],
+      "box": [],
+      "notes": [
+        {
+          "text": "jeden Sonntag – für Mama",
+          "x": 57,
+          "y": 19.4,
+          "r": -2,
+          "size": 24
+        }
+      ]
+    },
+    "v5-p10": {
+      "page": 10,
+      "highlight": [
+        "Die ersten 30 Minuten gehören dir, nicht dem Handy."
+      ],
+      "underline": [
+        "stehe ich auf, öffne das Fenster und trinke ein Glas Wasser"
+      ],
+      "box": [],
+      "notes": [
+        {
+          "text": "an den Spiegel!",
+          "x": 66,
+          "y": 29.2,
+          "r": -6,
+          "size": 30
+        },
+        {
+          "text": "nach dem Fajr",
+          "x": 70,
+          "y": 43.5,
+          "r": -3,
+          "size": 26
+        }
+      ]
+    },
+    "v5-p14": {
+      "page": 14,
+      "highlight": [
+        "Du musst nicht jeden Tag perfekt sein."
+      ],
+      "underline": [],
+      "box": [],
+      "notes": [
+        {
+          "text": "30 Tage – wie Ramadan",
+          "x": 56,
+          "y": 54.2,
+          "r": -4,
+          "size": 30
+        },
+        {
+          "text": "Montag",
+          "x": 31,
+          "y": 81.7,
+          "r": -3,
+          "size": 30
+        },
+        {
+          "text": "30",
+          "x": 64.6,
+          "y": 81.5,
+          "r": -3,
+          "size": 32
+        }
+      ]
+    }
+  },
+  "posts": [
+    {
+      "folder": "03_die-tiefgarage-um-eins",
+      "title": "DIE TIEFGARAGE UM EINS",
+      "caption": "Fiktive Geschichte. Hättet ihr auch zuerst an eine andere Frau gedacht? Schreibt ein 🤲 für alle, die heimlich gegen etwas kämpfen.\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#muslimtiktok #deutschemuslime #muslimischefrauen #handysucht\nWerbung",
+      "captionShort": "mein mann ist ein halbes jahr lang jede nacht um eins in die tiefgarage gegangen. ich dachte, er schreibt mit einer anderen frau. im mai bin ich ihm barfuß hinterher und hab gesehen, was er da unten macht #muslimtiktok #deutschemuslime #handysucht",
+      "slides": [
+        {
+          "bg": "photo",
+          "img": "o_phone_nightstand_glow",
+          "hook": true,
+          "text": "Mein Mann ist ein halbes Jahr lang jede Nacht um eins aufgestanden und in die Tiefgarage gegangen.\nIm Mai hab ich erfahren, warum 💔"
+        },
+        {
+          "bg": "photo",
+          "img": "o_hallway_shoes",
+          "text": "Ich bin 29, Duisburg. Sechs Jahre verheiratet, eine Tochter, drei Jahre alt. Mein Mann fährt Bus und muss um fünf raus. Im November hab ich nachts zum ersten Mal gemerkt, dass seine Seite vom Bett kalt war. Sein Autoschlüssel war weg. Um drei lag er wieder neben mir und hat so getan, als hätte er geschlafen."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_sofa_glow",
+          "text": "Am Morgen hab ich ihn gefragt. Er meinte, er konnte nicht schlafen und war kurz an der frischen Luft. Um eins. Jede Nacht. In der Tiefgarage. Ich hab ihm kein Wort geglaubt. Und mir ist aufgefallen, dass er sein Handy auf einmal immer mit dem Display nach unten hingelegt hat."
+        },
+        {
+          "bg": "photo",
+          "img": "o_kids_room_night_door",
+          "text": "Ihr denkt jetzt dasselbe wie ich damals. Eine andere Frau. Ich hab nächtelang wach gelegen und mir vorgestellt, mit wem er da unten schreibt. Ich hab zu Allah gebetet, dass ich mich irre. Und ich hab mich geschämt, weil ich meinem eigenen Mann nicht mehr vertraut hab."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_nightstand_glow",
+          "zoom": 2.3,
+          "pos": "60% 50%",
+          "blur": 12,
+          "dim": 0.6,
+          "text": "Im Mai bin ich ihm hinterher. Barfuß, die Abaya über dem Schlafanzug. Er saß im Auto, Motor aus, Licht aus. Kein Anruf. Keine Frau. Er saß einfach da und hat gescrollt. Video für Video. Im Licht vom Display hab ich gesehen, dass er weint."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_sofa_glow",
+          "zoom": 1.9,
+          "pos": "48% 45%",
+          "blur": 3,
+          "dim": 0.55,
+          "text": "Ich hab an die Scheibe geklopft. Er ist so zusammengezuckt, dass ihm das Handy in den Fußraum gefallen ist. Dann hat er gesagt: Ich komm nicht davon los. Ich hab dir versprochen, nachts nicht mehr am Handy zu sein. Ich wollte nicht, dass du siehst, dass ich es nicht schaffe."
+        },
+        {
+          "bg": "annot",
+          "annot": "v3-p02",
+          "surface": "dark",
+          "night": true,
+          "staple": true,
+          "stack": 3,
+          "place": {
+            "w": 800,
+            "cx": 540,
+            "cy": 700,
+            "rot": -4
+          },
+          "textPos": "low",
+          "text": "Auf dem Beifahrersitz lagen zusammengetackerte Blätter. Ein ausgedrucktes PDF, überall mit Kuli markiert. Oben in seiner Schrift: Tag 3 – wieder verloren."
+        },
+        {
+          "bg": "annot",
+          "annot": "v3-p02",
+          "surface": "dark",
+          "night": true,
+          "staple": true,
+          "stack": 3,
+          "place": {
+            "w": 800,
+            "cx": 540,
+            "cy": 760,
+            "rot": -4
+          },
+          "blur": 9,
+          "dim": 0.7,
+          "textPos": "top",
+          "text": "Ich hab mich neben ihn gesetzt und gelesen, was er markiert hatte: Du bist nicht schwach. Gegen so ein System kommst du mit Willenskraft allein nicht an. Du brauchst ein besseres System. Er hatte keine andere Frau. Er hat sich geschämt. Sechs Monate lang, allein, in einer Tiefgarage."
+        },
+        {
+          "bg": "photo",
+          "img": "o_basket_phones_hallway",
+          "text": "Seit dieser Nacht machen wir es zusammen. Um 22 Uhr kommen beide Handys in einen Korb im Flur. Geweckt werden wir von einem alten Wecker mit Zeigern, 9,99 €. Die erste Woche war hart. Er ist zweimal nachts aufgestanden. Ich hab nicht geschimpft. Ich bin mit ihm in die Küche und hab Tee gemacht."
+        },
+        {
+          "bg": "sky",
+          "sky": {
+            "variant": "dawn",
+            "frame": "balcony",
+            "minaret": true,
+            "moon": true,
+            "seed": 11
+          },
+          "text": "Letzte Woche hat er mich zum ersten Mal seit Monaten zum Fajr geweckt. Wir haben zusammen gebetet und danach auf dem Balkon gesessen, bis es hell wurde. Kein Handy. Nur wir zwei.\nSagt ehrlich: Hättet ihr auch zuerst an eine andere Frau gedacht? Schreibt ein 🤲 für alle, die heimlich gegen etwas kämpfen."
+        },
+        {
+          "bg": "annot",
+          "annot": "v3-p02",
+          "surface": "table",
+          "text": "Die Seite vom Beifahrersitz. Er hatte sie dreimal markiert 💔",
+          "focus": [
+            0,
+            0,
+            100,
+            62
+          ]
+        },
+        {
+          "bg": "exemplar",
+          "surface": "fridge",
+          "text": "Unser Exemplar hängt jetzt am Kühlschrank ❤️\nEs heißt „Leg es weg.“ – Link im ersten Kommentar"
+        }
+      ]
+    },
+    {
+      "folder": "04_die-nachricht-von-meiner-mutter",
+      "title": "DIE NACHRICHT VON MEINER MUTTER",
+      "caption": "Fiktive Geschichte. Schreibt ein ❤️ für eure Mama – und ruft sie heute an, ohne nebenbei zu scrollen.\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#muslimtiktok #deutschemuslime #mama #handysucht\nWerbung",
+      "captionShort": "meine mama hat mir geschrieben: liebst du mich noch? ich saß neben ihr auf dem sofa. dann hat sie ein altes schulheft geholt. 43 punkte. dinge, die sie mir noch erzählen will #muslimtiktok #mama #handysucht",
+      "slides": [
+        {
+          "bg": "chat",
+          "chat": {
+            "name": "Mama ❤️",
+            "avatar": "🌹",
+            "avatarBg": "#f6dde3",
+            "status": "online",
+            "clock": "15:42",
+            "date": "Heute",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Bin gleich da, Mama 😘",
+                "time": "13:05"
+              },
+              {
+                "from": "them",
+                "text": "Liebst du mich noch?",
+                "time": "15:42"
+              }
+            ]
+          },
+          "hook": true,
+          "text": "Meine Mutter hat mir geschrieben: „Liebst du mich noch?“\nIch saß neben ihr auf dem Sofa 💔"
+        },
+        {
+          "bg": "photo",
+          "img": "o_hallway_shoes",
+          "text": "Ich bin 27, Pflegefachfrau in Frankfurt. Seit Papa vor zwei Jahren gestorben ist, fahr ich jeden Sonntag zu Mama nach Offenbach. Sie kocht, ich esse, wir sitzen auf dem Sofa. Ich dachte, ich bin eine gute Tochter. Ich bin ja jeden Sonntag da."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_sofa_glow",
+          "text": "An dem Sonntag hat mein Handy vibriert, und ich hab die Nachricht gelesen, bevor ich gesehen hab, von wem sie ist. Mama. Liebst du mich noch? Ich hab zu ihr rübergeschaut. Sie hat nicht zurückgeschaut. Sie hat auf ihre Hände geschaut."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_nightstand_glow",
+          "blur": 16,
+          "dim": 0.8,
+          "text": "Ich hab gelacht: Mama, was soll das, ich sitz doch neben dir. Und sie hat ganz leise gesagt: Nein. Dein Körper sitzt neben mir. Du bist seit zwei Jahren jeden Sonntag hier. Und seit zwei Jahren nicht da."
+        },
+        {
+          "bg": "paper",
+          "surface": "table",
+          "photo": {
+            "blur": 7
+          },
+          "paper": {
+            "kind": "notebook",
+            "title": "Dinge, die ich meiner Tochter noch erzählen will",
+            "lines": [
+              "1. Wie ich Papa kennengelernt habe",
+              "2. Warum wir nach Deutschland kamen",
+              "3. Deine ersten Worte (auf Darija!)",
+              "4. Harira wie Oma – ohne Messbecher",
+              "5. Die Geschichte von deinem Namen",
+              "6. Mein erster Winter in Offenbach",
+              "7. Was Papa am Ende gesagt hat",
+              "8. Warum ich immer Minze pflanze",
+              "9. Deine Nächte bei Oma",
+              "10. Unsere erste Wohnung",
+              "11. Warum ich freitags Couscous koche",
+              "12. Wie man Msemen richtig faltet",
+              "13. Mein Lieblingsdua"
+            ]
+          },
+          "text": "Dann hat sie ein altes Schulheft aus der Küchenschublade geholt. 43 Punkte, in ihrer Schrift."
+        },
+        {
+          "bg": "paper",
+          "surface": "dark",
+          "night": true,
+          "paper": {
+            "kind": "notebook",
+            "title": "Dinge, die ich meiner Tochter noch erzählen will",
+            "lines": [
+              "1. Wie ich Papa kennengelernt habe",
+              "2. Warum wir nach Deutschland kamen",
+              "3. Deine ersten Worte (auf Darija!)",
+              "4. Harira wie Oma – ohne Messbecher",
+              "5. Die Geschichte von deinem Namen",
+              "6. Mein erster Winter in Offenbach",
+              "7. Was Papa am Ende gesagt hat",
+              "8. Warum ich immer Minze pflanze",
+              "9. Deine Nächte bei Oma",
+              "10. Unsere erste Wohnung",
+              "11. Warum ich freitags Couscous koche",
+              "12. Wie man Msemen richtig faltet",
+              "13. Mein Lieblingsdua"
+            ],
+            "top": 330,
+            "rot": 3
+          },
+          "blur": 7,
+          "dim": 0.75,
+          "textPos": "top",
+          "text": "Ich hab die Liste im Auto gelesen und konnte nicht losfahren. Warum wir nach Deutschland gekommen sind. Meine ersten Worte. Was Papa am Ende gesagt hat. Sie hat zwei Jahre lang Sonntag für Sonntag gewartet, dass ich einmal von meinem Handy hochschaue."
+        },
+        {
+          "bg": "chat",
+          "chat": {
+            "name": "Yassin",
+            "avatar": "🏔️",
+            "avatarBg": "#dbe7f4",
+            "status": "online",
+            "clock": "22:17",
+            "date": "Heute",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Lies Kapitel 9. Bitte. Für Mama.",
+                "time": "22:14"
+              },
+              {
+                "from": "them",
+                "file": true,
+                "time": "22:14"
+              },
+              {
+                "from": "me",
+                "text": "Hat sie dir das erzählt? 😔",
+                "time": "22:16"
+              },
+              {
+                "from": "them",
+                "text": "Sie erzählt es jedem außer dir.",
+                "time": "22:17"
+              }
+            ]
+          },
+          "textPos": "low",
+          "text": "Mein Bruder hat mir am Abend ein PDF geschickt."
+        },
+        {
+          "bg": "photo",
+          "img": "o_basket_phones_hallway",
+          "text": "Da stand ein Wort, das ich nicht kannte: Phubbing. Aufs Handy schauen, während jemand mit dir redet. Jetzt steht bei Mama ein Korb neben der Tür. Mein Handy kommt da rein, bevor ich die Schuhe ausziehe. Und jeden Sonntag stell ich ihr eine der sechs Fragen aus dem PDF. Die erste war: Mama, was war diese Woche dein schönster Moment?"
+        },
+        {
+          "bg": "paper",
+          "surface": "table",
+          "photo": {
+            "blur": 6
+          },
+          "paper": {
+            "kind": "card",
+            "title": "Harira – wie Oma",
+            "lines": [
+              "Kichererbsen (über Nacht einweichen)",
+              "Linsen, Tomaten, Sellerie, Zwiebel",
+              "Koriander + Petersilie – viel!",
+              "Ingwer, Kurkuma, Zimt, Pfeffer",
+              "zum Schluss: Tadouira (Mehl + Wasser)",
+              "„mit Gefühl rühren“ – Mama"
+            ]
+          },
+          "text": "Letzten Sonntag waren wir bei Punkt 4. Sie hat gekocht, ich hab mitgeschrieben. Auf Papier."
+        },
+        {
+          "bg": "sky",
+          "sky": {
+            "variant": "dusk",
+            "frame": "window",
+            "seed": 23
+          },
+          "text": "Punkt 7 heben wir uns für Ramadan auf. Was Papa am Ende gesagt hat, will sie mir beim Iftar erzählen. Ich hab zwei Jahre gebraucht, um endlich zuzuhören.\nSchreibt ein ❤️ für eure Mama. Und ruft sie heute an. Ohne nebenbei zu scrollen."
+        },
+        {
+          "bg": "annot",
+          "annot": "v4-p20",
+          "surface": "sofaClose",
+          "crop": [
+            49.5,
+            19.2,
+            43,
+            31.5
+          ],
+          "fold": true,
+          "place": {
+            "w": 860,
+            "cx": 540,
+            "cy": 900,
+            "rot": 3
+          },
+          "text": "Die sechs Fragen aus meinem Portemonnaie ❤️"
+        },
+        {
+          "bg": "exemplar",
+          "surface": "sofa",
+          "place": {
+            "w": 700,
+            "cx": 540,
+            "cy": 900,
+            "rot": 6,
+            "tilt": 12
+          },
+          "text": "Mein Bruder hatte recht ❤️\nEs heißt „Leg es weg.“ – Link im ersten Kommentar"
+        }
+      ]
+    },
+    {
+      "folder": "05_ist-das-auch-ein-gebet",
+      "title": "IST DAS AUCH EIN GEBET?",
+      "caption": "Fiktive Geschichte. Schreibt ein 🤲, wenn ihr euch wiedererkennt.\n📱 „Leg es weg.“ – der 30-Tage-Plan gegen Handysucht (Link im ersten Kommentar)\n#muslimtiktok #deutschemuslime #muslimischefrauen #handysucht\nWerbung",
+      "captionShort": "meine tochter hat mich gefragt, warum ich nach dem beten immer zuerst aufs handy schaue. ob das auch ein gebet ist. in der 27. nacht #muslimtiktok #ramadan #handysucht",
+      "slides": [
+        {
+          "bg": "photo",
+          "img": "o_kids_room_night_door",
+          "hook": true,
+          "text": "Meine Tochter (6) hat mich gefragt, warum ich nach dem Beten immer zuerst aufs Handy schaue.\nIch hatte keine Antwort 💔"
+        },
+        {
+          "bg": "lock",
+          "img": "o_crayons_paper_table",
+          "lock": {
+            "day": "Sonntag, 8. März",
+            "time": "23:48",
+            "title": "Wöchentlicher Bericht verfügbar",
+            "body": "Deine Bildschirmzeit ist letzte Woche um 12 % gestiegen – durchschnittlich 4 Std. 50 Min. pro Tag."
+          },
+          "text": "Ich bin 32, Bremen, zwei Kinder. Im Ramadan wollte ich jeden Tag einen Juz lesen. Ich hab keinen einzigen Tag durchgehalten. Nicht wegen der Kinder. Nicht wegen der Arbeit. Sondern wegen dem hier."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_sofa_glow",
+          "zoom": 1.9,
+          "pos": "48% 45%",
+          "blur": 5,
+          "dim": 0.5,
+          "text": "Im Ramadan hab ich es gemerkt: Den ganzen Tag ohne Essen und Trinken hab ich geschafft. Aber keine zehn Minuten ohne Handy. Nach dem Iftar: Handy. Vor dem Suhur: Handy. Sogar auf dem Gebetsteppich lag es neben mir, Display nach oben."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_nightstand_glow",
+          "text": "In der 27. Nacht hab ich mit meiner Tochter Isha gebetet. Sie stand neben mir auf ihrem kleinen rosa Teppich. Nach dem Salam hab ich sofort nach dem Handy gegriffen. Und sie hat gefragt: Mama, warum guckst du nach dem Beten immer zuerst aufs Handy? Ist das auch ein Gebet?"
+        },
+        {
+          "bg": "photo",
+          "img": "o_hallway_shoes",
+          "blur": 10,
+          "dim": 0.75,
+          "text": "Ich hab gesagt: Ich schau nur, wie spät es ist. Das war gelogen. Ich wusste, wie spät es war. Ich hab geschaut, ob jemand meine Story geliked hat. In der 27. Nacht."
+        },
+        {
+          "bg": "photo",
+          "img": "o_phone_sofa_glow",
+          "text": "Nach Ramadan wurde es schlimmer. Ohne Fasten gab es keinen Rahmen mehr. Abends bis eins am Handy, morgens Fajr verschlafen. Und dann hab ich gesehen, wie meine Tochter mit ihrem Spielzeughandy neben ihrem Teppich saß. Genau wie ich."
+        },
+        {
+          "bg": "annot",
+          "annot": "v5-p14",
+          "surface": "table",
+          "sleeve": true,
+          "place": {
+            "w": 760,
+            "cx": 560,
+            "cy": 1130,
+            "rot": -7,
+            "tilt": 14
+          },
+          "text": "Eine Schwester aus der Moschee hat mir ein ausgedrucktes PDF gegeben, in einer Klarsichthülle. Sie hat gesagt: Du hast 30 Tage gefastet. Dann schaffst du auch 30 Tage für dein Handy."
+        },
+        {
+          "bg": "paper",
+          "surface": "mirror",
+          "paper": {
+            "kind": "sticky",
+            "title": "",
+            "lines": [
+              "Die ersten",
+              "30 Minuten",
+              "gehören dir,",
+              "nicht dem Handy."
+            ],
+            "top": 800
+          },
+          "text": "Auf Seite 10 stand ein Satz, den ich mir an den Spiegel geklebt hab. Seitdem gilt bei uns: Nach dem Beten bleibt das Handy im Flur. Erst Dhikr. Dann Frühstück. Dann Handy."
+        },
+        {
+          "bg": "photo",
+          "img": "o_basket_phones_hallway",
+          "text": "Tag 19. Bildschirmzeit: 1 Stunde 40. Ich lese jetzt jeden Morgen nach dem Fajr Quran, bevor ich das Handy überhaupt anfasse. Und meine Tochter hat ihr Spielzeughandy in den Korb gelegt und gesagt: Das schläft jetzt auch im Flur."
+        },
+        {
+          "bg": "sky",
+          "sky": {
+            "variant": "dawn",
+            "frame": "window",
+            "moon": true,
+            "seed": 37
+          },
+          "text": "Letzte Woche hat sie mich nach dem Beten gefragt, warum ich so lange sitzen bleibe. Ich hab gesagt: Weil ich noch mit Allah rede. Da ist sie einfach neben mir sitzen geblieben.\nSchreibt ein 🤲, wenn ihr euch wiedererkennt. Möge Allah uns helfen, unsere Zeit zurückzuholen."
+        },
+        {
+          "bg": "annot",
+          "annot": "v5-p10",
+          "surface": "table",
+          "text": "Seite 10. Der Satz, der jetzt an meinem Spiegel klebt 🤲",
+          "focus": [
+            16,
+            28,
+            76,
+            16
+          ]
+        },
+        {
+          "bg": "exemplar",
+          "surface": "table",
+          "sleeve": true,
+          "text": "Die Schwester aus der Moschee hatte recht ❤️\nEs heißt „Leg es weg.“ – Link im ersten Kommentar"
+        }
+      ]
+    }
+  ]
+}

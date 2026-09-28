@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Leg es weg – TikTok Slides v2</title>
+<!-- v2 slides (1080x1620, 2:3) modelled on a viral native story slideshow:
+     candid photo + black text on white TikTok label boxes, product shown as a printed, annotated page.
+     Rendered by scripts/build-tiktok2.mjs from tiktok/posts2.json. -->
+<style>
+@font-face { font-family: 'TikTok Sans'; src: url('../src/fonts/tiktok-sans-latin-wght-normal.woff2') format('woff2'); font-weight: 300 900; font-display: block; }
+@font-face { font-family: 'Caveat'; src: url('../src/fonts/caveat-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: block; }
+@font-face { font-family: 'Caveat'; src: url('../src/fonts/caveat-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: block; }
+@font-face { font-family: 'Inter'; src: url('../src/fonts/inter-latin-opsz-normal.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+
+:root { --emoji: 'Noto Color Emoji'; --pen: #1f3a9a; --pencil: #253a7c; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0e0e0e; }
+.slide { position: relative; width: 1080px; height: 1620px; overflow: hidden; background: #161616; margin: 0 0 24px; }
+.abs { position: absolute; }
+.cover { position: absolute; inset: 0; }
+.photo { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.grain { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; opacity: .16; z-index: 15; background-size: 256px 256px; }
+.vig { position: absolute; inset: 0; pointer-events: none; z-index: 14; background: radial-gradient(125% 95% at 50% 46%, transparent 58%, rgba(0,0,0,.32) 100%); }
+
+/* ---------- TikTok-native text (black on white label boxes) ---------- */
+.txt { position: absolute; left: 76px; right: 76px; text-align: center; z-index: 30; }
+.txt.top { top: 250px; }
+.txt.head { top: 58px; }
+.txt.mid { top: 50%; transform: translateY(-50%); }
+.txt.low { bottom: 236px; }
+.txt p { font-family: 'TikTok Sans', var(--emoji), sans-serif; font-weight: 700; font-size: 56px; line-height: 70px; color: #000; letter-spacing: -.2px; }
+.txt .para { position: relative; }
+.txt .para + .para { margin-top: 36px; }
+.txt .fg { position: absolute; left: 0; right: 0; top: 0; }
+.txt .bg span { color: transparent; }
+.txt .fg span { background: none; }
+.txt span { background: #fff; padding: 8px 16px 9px; border-radius: 14px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.pill { position: absolute; z-index: 31; top: 44px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  font: 600 29px/1 'TikTok Sans', sans-serif; color: #fff; padding: 12px 24px 13px; border-radius: 999px;
+  background: rgba(70,72,78,.62); }
+
+/* ---------- chat screenshot ---------- */
+.chat { position: absolute; inset: 0; background: #efeae2; font-family: 'Inter', var(--emoji), sans-serif; color: #111b21; }
+.chat .wall { position: absolute; inset: 0; opacity: .22; }
+.c-top { position: absolute; left: 0; right: 0; top: 0; background: #f6f6f6; border-bottom: 2px solid #dcdcdc; z-index: 2; }
+.sbar { height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 22px 64px 0 118px; }
+.sbar .clk { font: 600 47px/1 'Inter', sans-serif; letter-spacing: -.5px; }
+.sbar svg { height: 36px; }
+.c-hd { height: 150px; display: flex; align-items: center; padding: 0 44px 10px 22px; gap: 20px; }
+.c-hd .back { width: 60px; height: 60px; color: #111; }
+.c-av { width: 104px; height: 104px; border-radius: 50%; display: grid; place-items: center; font-size: 56px; flex: none; }
+.c-nm { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.c-nm b { font-weight: 600; font-size: 46px; line-height: 1.05; }
+.c-nm small { font-size: 33px; color: #667781; }
+.c-ic { display: flex; gap: 58px; color: #111; }
+.c-ic svg { width: 62px; height: 62px; }
+.c-body { position: absolute; left: 0; right: 0; top: 300px; padding: 0 30px; display: flex; flex-direction: column; }
+.c-date { align-self: center; background: #fff; color: #54656f; font-size: 33px; padding: 9px 26px 11px; border-radius: 16px; margin: 6px 0 26px; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.m { position: relative; max-width: 80%; padding: 16px 22px 12px 28px; border-radius: 24px; display: flex; align-items: flex-end; gap: 18px; font-size: 46px; line-height: 1.27; margin-top: 10px; box-shadow: 0 1px 1.5px rgba(0,0,0,.13); }
+.m.gap { margin-top: 26px; }
+.m.me { align-self: flex-end; background: #d9fdd3; }
+.m.them { align-self: flex-start; background: #fff; }
+.m.me.tail { border-top-right-radius: 0; }
+.m.them.tail { border-top-left-radius: 0; }
+.m.me.tail::after { content: ''; position: absolute; right: -18px; top: 0; border-left: 20px solid #d9fdd3; border-bottom: 22px solid transparent; }
+.m.them.tail::after { content: ''; position: absolute; left: -18px; top: 0; border-right: 20px solid #fff; border-bottom: 22px solid transparent; }
+.m .t { flex: none; font-size: 29px; color: #667781; white-space: nowrap; display: flex; align-items: center; gap: 6px; margin-bottom: -2px; }
+.m .t svg { width: 38px; height: 26px; color: #53bdeb; }
+.m.file { flex-direction: column; align-items: stretch; gap: 0; padding: 10px 10px 12px; width: 76%; }
+.f-prev { height: 250px; border-radius: 16px; overflow: hidden; background: #ddd; }
+.f-prev img { width: 100%; display: block; }
+.f-row { display: flex; align-items: center; gap: 22px; background: #f5f6f6; border-radius: 16px; margin-top: 8px; padding: 22px 22px; }
+.f-ic { width: 76px; height: 92px; border-radius: 10px; background: #e2493b; color: #fff; font: 700 25px/92px 'Inter', sans-serif; text-align: center; flex: none; }
+.f-meta { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.f-meta b { font-weight: 500; font-size: 40px; }
+.f-meta small { font-size: 30px; color: #667781; }
+.m.file .t { align-self: flex-end; margin: 10px 8px 0 0; }
+.c-inp { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: #f6f6f6; border-top: 2px solid #dcdcdc; display: flex; align-items: center; gap: 30px; padding: 0 40px 20px; color: #111; }
+.c-inp svg { width: 60px; height: 60px; flex: none; }
+.c-inp .field { flex: 1; height: 88px; border-radius: 44px; background: #fff; border: 2px solid #e0e0e0; }
+
+/* ---------- lock screen ---------- */
+.lk { position: absolute; inset: 0; color: #fff; font-family: 'Inter', sans-serif; z-index: 5; text-align: center; }
+.lk-sb { position: absolute; right: 64px; top: 50px; display: flex; gap: 14px; }
+.lk-sb svg { height: 36px; }
+.lk-pad { position: absolute; top: 96px; left: 0; right: 0; }
+.lk-pad svg { width: 46px; height: 58px; }
+.lk-date { position: absolute; top: 178px; left: 0; right: 0; font-weight: 600; font-size: 50px; opacity: .92; }
+.lk-time { position: absolute; top: 232px; left: 0; right: 0; font-weight: 700; font-size: 268px; line-height: 1; letter-spacing: -6px; opacity: .93; font-feature-settings: 'tnum'; }
+.lk-n { position: absolute; left: 40px; right: 40px; top: 1116px; background: rgba(238,238,242,.8); color: #111; border-radius: 46px; padding: 30px 34px 34px; display: flex; gap: 28px; text-align: left; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+.lk-ic { width: 88px; height: 88px; border-radius: 21px; background: linear-gradient(160deg, #8a6bff, #5634d6); display: grid; place-items: center; flex: none; }
+.lk-ic svg { width: 52px; height: 52px; color: #fff; }
+.lk-nb { flex: 1; min-width: 0; }
+.lk-nh { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.lk-nh b { font-weight: 600; font-size: 38px; }
+.lk-nh span { font-size: 32px; color: #5f5f66; }
+.lk-nb p { font-size: 37px; line-height: 1.3; margin-top: 4px; color: #1c1c1e; }
+.lk-btm { position: absolute; bottom: 70px; left: 96px; right: 96px; display: flex; justify-content: space-between; }
+.lk-btm span { width: 118px; height: 118px; border-radius: 50%; background: rgba(40,40,46,.45); display: grid; place-items: center; }
+.lk-btm svg { width: 54px; height: 54px; color: #fff; }
+.lk-home { position: absolute; bottom: 22px; left: 50%; width: 330px; height: 12px; margin-left: -165px; border-radius: 6px; background: rgba(255,255,255,.9); }
+
+/* ---------- handwritten paper ---------- */
+.hand { font-family: 'Caveat', cursive; color: var(--pencil); }
+.nb { position: absolute; background-color: #fbfaf4; box-shadow: 0 34px 60px rgba(0,0,0,.38), 0 6px 14px rgba(0,0,0,.22);
+  background-image: linear-gradient(90deg, transparent 122px, #e29a9a 122px, #e29a9a 125px, transparent 125px),
+                    repeating-linear-gradient(180deg, transparent 0 62px, #a8bddf 62px 64px);
+  background-position: 0 0, 0 22px; }
+.nb::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.10), transparent 7%), linear-gradient(170deg, rgba(255,255,255,.18), rgba(0,0,0,.07)); }
+.nb .ttl { position: absolute; left: 150px; right: 50px; top: 38px; font: 700 56px/64px 'Caveat', cursive; color: var(--pencil); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+.nb ol { position: absolute; left: 150px; right: 56px; list-style: none; }
+.nb li { font: 600 50px/64px 'Caveat', cursive; color: var(--pencil); padding-left: 38px; text-indent: -38px; }
+.card { position: absolute; background-color: #fffdf7; box-shadow: 0 30px 55px rgba(0,0,0,.35), 0 5px 12px rgba(0,0,0,.2);
+  background-image: linear-gradient(180deg, transparent 128px, #e07f7f 128px, #e07f7f 131px, transparent 131px),
+                    repeating-linear-gradient(180deg, transparent 0 60px, #b9cbe6 60px 62px);
+  background-position: 0 0, 0 134px; background-size: 100% 100%, 100% calc(100% - 134px); background-repeat: no-repeat; }
+.card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(165deg, rgba(255,255,255,.2), rgba(0,0,0,.06)); }
+.card .ttl { position: absolute; left: 46px; right: 30px; top: 34px; font: 700 70px/80px 'Caveat', cursive; color: var(--pencil); }
+.card ol { position: absolute; left: 46px; right: 20px; top: 150px; list-style: none; }
+.card li { font: 600 48px/62px 'Caveat', cursive; color: var(--pencil); white-space: nowrap; }
+.sticky { position: absolute; background: linear-gradient(180deg, #fbe46a 0%, #fde978 22%, #fdeb82 100%); box-shadow: 0 22px 34px rgba(0,0,0,.28), 0 3px 6px rgba(0,0,0,.18); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.sticky::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 90px; background: linear-gradient(180deg, rgba(0,0,0,.05), transparent); }
+.sticky div { font: 700 80px/88px 'Caveat', cursive; color: #1d1d24; text-align: center; }
+
+/* ---------- surfaces ---------- */
+.seat { position: absolute; inset: 0; background: radial-gradient(90% 70% at 50% 42%, #414248 0%, #2b2c31 55%, #151518 100%); }
+.seat i { position: absolute; top: -40px; bottom: -40px; width: 16px; background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(255,255,255,.08) 70%, transparent); }
+.fridge { position: absolute; inset: 0; background: linear-gradient(90deg, #cfd1d5 0%, #e9ebee 16%, #f5f6f7 42%, #eef0f2 70%, #d7d9dd 100%); }
+.fridge::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,.35), transparent 40%, rgba(0,0,0,.08)); }
+.fridge .handle { position: absolute; left: 58px; top: 90px; width: 36px; height: 1000px; border-radius: 18px; background: linear-gradient(90deg, #9da1a8, #eceef0 45%, #a2a6ad); box-shadow: 8px 10px 18px rgba(0,0,0,.22); }
+.fridge .seam { position: absolute; left: 0; right: 0; top: 1470px; height: 12px; background: linear-gradient(#b8bbc0, #85888e 50%, #cdd0d4); }
+.magnet { position: absolute; width: 74px; height: 74px; border-radius: 50%; z-index: 8; box-shadow: 4px 8px 12px rgba(0,0,0,.35); }
+.mirror-edge { position: absolute; top: 0; bottom: 0; left: 0; width: 70px; background: linear-gradient(90deg, #d8cfc3 0 52px, #f4f4f4 52px 58px, #9ea3a8 58px 70px); z-index: 3; }
+.mirror-sheen { position: absolute; inset: 0; z-index: 2; background: linear-gradient(115deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 32%, rgba(255,255,255,.12) 55%, rgba(255,255,255,0) 72%); }
+
+/* ---------- printed pages ---------- */
+.pg { position: absolute; overflow: hidden; background: #fff; transform-origin: 50% 50%; }
+.pg img { position: absolute; filter: contrast(.95) saturate(.92) brightness(.995); }
+.pg .light { position: absolute; inset: 0; background: linear-gradient(158deg, rgba(255,255,255,.08), rgba(0,0,0,.11)); mix-blend-mode: multiply; }
+.pg.fold .crease { position: absolute; left: 0; right: 0; height: 26px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.10) 48%, rgba(255,255,255,.35) 52%, rgba(0,0,0,0)); }
+.pg.fold .crease.v { top: 0; bottom: 0; width: 26px; height: auto; background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.09) 48%, rgba(255,255,255,.3) 52%, rgba(0,0,0,0)); }
+.staple { position: absolute; width: 62px; height: 9px; border-radius: 4px; background: linear-gradient(180deg, #f1f2f4, #9aa0a8 60%, #d9dce0); box-shadow: 1px 2px 2px rgba(0,0,0,.35); z-index: 6; }
+.sleeve { position: absolute; z-index: 6; border: 2px solid rgba(255,255,255,.55); border-radius: 6px; overflow: hidden;
+  background: linear-gradient(118deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.04) 30%, rgba(255,255,255,.34) 41%, rgba(255,255,255,.05) 52%, rgba(255,255,255,0) 70%, rgba(255,255,255,.14) 86%, rgba(255,255,255,.03) 100%); }
+.sleeve .strip { position: absolute; left: 0; top: 0; bottom: 0; width: 56px; background: rgba(245,248,252,.55); border-right: 2px solid rgba(255,255,255,.7); }
+.sleeve .strip b { position: absolute; left: 16px; width: 24px; height: 24px; border-radius: 50%; background: rgba(60,60,60,.25); box-shadow: inset 1px 2px 3px rgba(0,0,0,.35); }
+.shadowbox { position: absolute; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+// Deterministic noise so re-renders give identical files.
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const GRAIN = (() => { const r = rng(7), c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d'), im = x.createImageData(256, 256);
+  for (let i = 0; i < im.data.length; i += 4) { const v = (r() * 255) | 0; im.data[i] = im.data[i + 1] = im.data[i + 2] = v; im.data[i + 3] = 255; }
+  x.putImageData(im, 0, 0); return c.toDataURL(); })();
+const PAGE_W = 1588, PAGE_H = 2246; // guide pages rendered at 2x (A4 = 794x1123 css px)
+const PDF_SIZE = '3,6 MB';
+
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+function el(tag, cls, parent, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; if (parent) parent.appendChild(e); return e; }
+
+const ICON = {
+  signal: '<svg viewBox="0 0 34 22"><rect x="0" y="15" width="6" height="7" rx="1.5" fill="currentColor"/><rect x="9" y="10" width="6" height="12" rx="1.5" fill="currentColor"/><rect x="18" y="5" width="6" height="17" rx="1.5" fill="currentColor"/><rect x="27" y="0" width="6" height="22" rx="1.5" fill="currentColor"/></svg>',
+  wifi: '<svg viewBox="0 0 30 22"><path d="M15 21.5l4.2-4.6a6 6 0 0 0-8.4 0z" fill="currentColor"/><path d="M8.2 14.2a9.6 9.6 0 0 1 13.6 0l2.5-2.7a13.4 13.4 0 0 0-18.6 0z" fill="currentColor"/><path d="M3.3 8.9a16.5 16.5 0 0 1 23.4 0l2.6-2.8a20.4 20.4 0 0 0-28.6 0z" fill="currentColor"/></svg>',
+  battery: '<svg viewBox="0 0 50 22"><rect x="1" y="1" width="42" height="20" rx="6" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="2"/><rect x="4" y="4" width="28" height="14" rx="3.5" fill="currentColor"/><rect x="45.5" y="7.5" width="3" height="7" rx="1.5" fill="currentColor" fill-opacity=".45"/></svg>',
+  back: '<svg class="back" viewBox="0 0 24 24"><path d="M15.5 3.5L7 12l8.5 8.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  video: '<svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 10.5l5-3v9l-5-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+  phone: '<svg viewBox="0 0 24 24"><path d="M6.6 3.5l2.6.4 1.3 4-1.8 1.6a12 12 0 0 0 5.8 5.8l1.6-1.8 4 1.3.4 2.6c.1 1-.7 2-1.8 2A16.6 16.6 0 0 1 4.6 5.3c0-1.1 1-1.9 2-1.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+  ticks: '<svg viewBox="0 0 30 20"><path d="M1.5 10.5l5 5L17 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 15.5L22.5 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  plus: '<svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  cam: '<svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3v10H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>',
+  mic: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  lock: '<svg viewBox="0 0 20 26"><rect x="1.5" y="11" width="17" height="13.5" rx="3" fill="currentColor"/><path d="M5 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>',
+  hourglass: '<svg viewBox="0 0 24 24"><path d="M6.5 3h11M6.5 21h11M8 3c0 5 8 5.5 8 9s-8 4-8 9M16 3c0 5-8 5.5-8 9s8 4 8 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  torch: '<svg viewBox="0 0 24 24"><path d="M8 2.5h8v4l-2 3v12h-4v-12l-2-3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="1.2" fill="currentColor"/></svg>',
+  camera: '<svg viewBox="0 0 24 24"><path d="M3.5 8h3.5l1.7-2.5h6.6L17 8h3.5v11h-17z" fill="currentColor"/><circle cx="12" cy="13.3" r="3.6" fill="#555"/></svg>'
+};
+const SB = `<span>${ICON.signal}</span><span>${ICON.wifi}</span><span>${ICON.battery}</span>`;
+
+// ---------- building blocks ----------
+function photo(parent, o) {
+  const d = el('div', 'photo', parent);
+  d.style.backgroundImage = `url(assets/${o.img}.webp)`;
+  const pos = o.pos || '50% 50%';
+  d.style.backgroundPosition = pos;
+  if (o.blur) d.style.inset = `-${o.blur * 3}px`;
+  const tf = []; if (o.mirror) tf.push('scaleX(-1)'); if (o.zoom) tf.push(`scale(${o.zoom})`);
+  if (tf.length) { d.style.transform = tf.join(' '); d.style.transformOrigin = pos; }
+  const f = []; if (o.blur) f.push(`blur(${o.blur}px)`); if (o.dim != null) f.push(`brightness(${o.dim})`);
+  f.push(o.warm ? 'sepia(.18) saturate(.95)' : 'saturate(.93)', 'contrast(.97)');
+  d.style.filter = f.join(' ');
+  return d;
+}
+function finish(sl, o = {}) {
+  if (o.vig !== false) el('div', 'vig', sl);
+  const g = el('div', 'grain', sl); g.style.backgroundImage = `url(${GRAIN})`; if (o.grain != null) g.style.opacity = o.grain;
+}
+function text(sl, s, pos) {
+  if (!s.text) return;
+  const t = el('div', 'txt ' + pos, sl);
+  // white label layer first, text layer on top, so a label never covers the descenders of the line above
+  for (const para of s.text.split('\n')) {
+    const line = para.replace(/ (\S{1,7})$/u, '\u00a0$1'), w = el('div', 'para', t);
+    for (const cls of ['bg', 'fg']) el('span', '', el('p', cls, w)).textContent = line;
+  }
+}
+
+// ---------- surfaces (backgrounds for paper, pages and the printed copy) ----------
+const SURFACE = {
+  table: { img: 'o_crayons_paper_table' },
+  sofa: { img: 'o_phone_sofa_glow', zoom: 1.25, pos: '50% 62%' },
+  sofaClose: { img: 'o_phone_sofa_glow', zoom: 2.1, pos: '40% 72%', blur: 2 }
+};
+function surface(sl, s) {
+  const kind = s.surface || 'table';
+  if (kind === 'dark') { const seat = el('div', 'seat', sl); for (const x of [150, 930]) { const i = el('i', '', seat); i.style.left = x + 'px'; } return; }
+  if (kind === 'fridge') { const f = el('div', 'fridge', sl); el('div', 'handle', f); el('div', 'seam', f); return; }
+  if (kind === 'mirror') { photo(sl, { img: 'o_hallway_shoes', mirror: true, blur: 4, dim: 1.04, zoom: 1.15, pos: '50% 40%' }); el('div', 'mirror-sheen', sl); el('div', 'mirror-edge', sl); return; }
+  photo(sl, Object.assign({}, SURFACE[kind] || {}, s.photo || {}));
+}
+function nightLight(sl) {
+  const a = el('div', 'cover', sl); a.style.cssText = 'z-index:9;background:rgba(18,12,4,.28);mix-blend-mode:multiply';
+  const b = el('div', 'cover', sl); b.style.cssText = 'z-index:9;background:radial-gradient(70% 55% at 40% 30%,rgba(255,214,160,.22),transparent 70%);mix-blend-mode:screen';
+}
+
+// A printed guide page (optionally cropped) placed on the slide.
+function printed(sl, src, o) {
+  let cx0 = 0, cy0 = 0, cw = PAGE_W, ch = PAGE_H;
+  if (o.crop) { cx0 = o.crop[0] / 100 * PAGE_W; cy0 = o.crop[1] / 100 * PAGE_H; cw = o.crop[2] / 100 * PAGE_W; ch = o.crop[3] / 100 * PAGE_H; }
+  const k = o.w / cw, W = cw * k, H = ch * k;
+  const box = el('div', 'shadowbox', sl);
+  box.style.cssText = `left:${o.cx - W / 2}px;top:${o.cy - H / 2}px;width:${W}px;height:${H}px;z-index:5;transform:${o.tilt ? `perspective(1700px) rotateX(${o.tilt}deg) ` : ''}rotate(${o.rot || 0}deg)`;
+  // sheets underneath (thickness of the printed stack)
+  const under = o.stack || 0;
+  for (let i = under; i >= 1; i--) {
+    const u = el('div', 'pg', box); u.style.cssText = `left:${i * 3.2}px;top:${i * 4}px;width:${W}px;height:${H}px;background:${i % 2 ? '#f3f2ee' : '#e9e8e3'};box-shadow:0 1px 0 rgba(0,0,0,.12)`;
+  }
+  const pg = el('div', 'pg' + (o.fold ? ' fold' : ''), box);
+  pg.style.cssText = `left:0;top:0;width:${W}px;height:${H}px;box-shadow:${o.shadow || '0 26px 50px rgba(0,0,0,.40), 0 4px 10px rgba(0,0,0,.25)'}`;
+  const img = el('img', '', pg); img.src = src;
+  img.style.cssText = `left:${-cx0 * k}px;top:${-cy0 * k}px;width:${PAGE_W * k}px;height:${PAGE_H * k}px`;
+  el('div', 'light', pg);
+  if (o.fold) { for (const f of [1 / 3, 2 / 3]) { const c = el('div', 'crease', pg); c.style.top = (H * f - 13) + 'px'; } const v = el('div', 'crease v', pg); v.style.left = (W / 2 - 13) + 'px'; }
+  if (o.staple) { const st = el('div', 'staple', box); st.style.cssText += `left:${22}px;top:${38}px;transform:rotate(-38deg)`; }
+  if (o.sleeve) {
+    const sv = el('div', 'sleeve', box); sv.style.cssText += `left:-16px;top:-12px;width:${W + 30}px;height:${H + 26}px`;
+    const strip = el('div', 'strip', sv); const n = Math.floor((H + 26) / 86);
+    for (let i = 0; i < n; i++) { const b = el('b', '', strip); b.style.top = (40 + i * 86) + 'px'; }
+  }
+  return box;
+}
+
+function childDrawing(sl, o) {
+  const d = el('div', 'abs', sl);
+  d.style.cssText = `left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;background:#fdfdfb;transform:rotate(${o.rot}deg);box-shadow:0 12px 26px rgba(0,0,0,.25);z-index:4`;
+  d.innerHTML = `<svg viewBox="0 0 400 300" width="100%" height="100%" style="filter:url(#crayon)">
+    <defs><filter id="crayon"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="322" cy="62" r="30" stroke="#f2c21b" stroke-width="10"/>
+      <path d="M322 14v-12M322 110v12M274 62h-12M370 62h12M288 28l-9-9M356 96l9 9M356 28l9-9M288 96l-9 9" stroke="#f2c21b" stroke-width="7"/>
+      <path d="M70 250v-100h130v100" stroke="#8a5a2b" stroke-width="9"/>
+      <path d="M52 156l83-68 83 68" stroke="#d8342c" stroke-width="10"/>
+      <rect x="112" y="196" width="34" height="54" stroke="#3a6fd8" stroke-width="7"/>
+      <path d="M8 262c60-8 120 6 190-2s130 4 196-4" stroke="#3aa63c" stroke-width="10"/>
+      <path d="M262 230c-14-22 16-34 22-10 6-24 36-12 22 10l-22 22z" stroke="#e0407a" stroke-width="8"/>
+      <path d="M20 40c30-10 60 8 90-4M150 30c26-8 50 6 74-2" stroke="#6fb6ec" stroke-width="7"/>
+    </g></svg>`;
+}
+
+// ---------- slide types ----------
+const BUILD = {
+  photo(sl, s) { photo(sl, s); finish(sl); },
+
+  chat(sl, s) {
+    const c = s.chat, w = el('div', 'chat', sl);
+    const wall = el('div', 'wall', w);
+    wall.style.backgroundImage = "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><g fill='none' stroke='%23d9d0c4' stroke-width='3'><circle cx='30' cy='34' r='12'/><path d='M110 20l14 14-14 14-14-14z'/><path d='M40 120c10-14 26-14 36 0'/><rect x='120' y='110' width='26' height='20' rx='5'/><path d='M150 70h14M157 63v14'/></g></svg>\")";
+    let prev = null;
+    const msgs = c.messages.map(m => {
+      const side = m.from === 'me' ? 'me' : 'them';
+      const cls = ['m', side]; if (side !== prev) { cls.push('tail'); if (prev) cls.push('gap'); } prev = side;
+      const t = `<span class="t">${esc(m.time)}${side === 'me' ? ICON.ticks : ''}</span>`;
+      if (m.file) { cls.push('file'); return `<div class="${cls.join(' ')}"><div class="f-prev"><img src="_annot/cover.png"></div><div class="f-row"><span class="f-ic">PDF</span><div class="f-meta"><b>Leg-es-weg.pdf</b><small>27 Seiten · PDF · ${PDF_SIZE}</small></div></div>${t}</div>`; }
+      return `<div class="${cls.join(' ')}"><span>${esc(m.text)}</span>${t}</div>`;
+    }).join('');
+    el('div', 'c-top', w, `<div class="sbar"><span class="clk">${esc(c.clock)}</span><span style="display:flex;gap:14px;align-items:center">${SB}</span></div>
+      <div class="c-hd">${ICON.back}<span class="c-av" style="background:${c.avatarBg || '#f4d9de'}">${c.avatar || '🌸'}</span><div class="c-nm"><b>${esc(c.name)}</b><small>${esc(c.status)}</small></div><span class="c-ic">${ICON.video}${ICON.phone}</span></div>`);
+    el('div', 'c-body', w, `<div class="c-date">${esc(c.date || 'Heute')}</div>${msgs}`);
+    el('div', 'c-inp', w, `${ICON.plus}<div class="field"></div>${ICON.cam}${ICON.mic}`);
+  },
+
+  lock(sl, s) {
+    photo(sl, { img: s.img, blur: 30, dim: .62, zoom: 1.1 });
+    const L = s.lock;
+    el('div', 'lk', sl, `<div class="lk-sb">${SB}</div><div class="lk-pad">${ICON.lock}</div>
+      <div class="lk-date">${esc(L.day)}</div><div class="lk-time">${esc(L.time)}</div>
+      <div class="lk-n"><div class="lk-ic">${ICON.hourglass}</div><div class="lk-nb"><div class="lk-nh"><b>${esc(L.title)}</b><span>${esc(L.when || 'jetzt')}</span></div><p>${esc(L.body)}</p></div></div>
+      <div class="lk-btm"><span>${ICON.torch}</span><span>${ICON.camera}</span></div><div class="lk-home"></div>`);
+  },
+
+  paper(sl, s) {
+    const comp = el('div', 'cover', sl);
+    surface(comp, s);
+    const P = s.paper;
+    if (P.kind === 'notebook') {
+      const nb = el('div', 'nb', comp);
+      nb.style.cssText += `left:64px;top:${P.top || 560}px;width:960px;height:1240px;transform:rotate(${P.rot ?? -2.4}deg);z-index:5`;
+      el('div', 'ttl', nb).textContent = P.title;
+      const ol = el('ol', '', nb); ol.style.top = '166px';
+      for (const line of P.lines) el('li', '', ol).textContent = line;
+    } else if (P.kind === 'card') {
+      const c = el('div', 'card', comp);
+      c.style.cssText += `left:90px;top:${P.top || 640}px;width:900px;height:620px;transform:rotate(${P.rot ?? 2.2}deg);z-index:5`;
+      el('div', 'ttl', c).textContent = P.title;
+      const ol = el('ol', '', c);
+      for (const line of P.lines) el('li', '', ol).textContent = line;
+    } else if (P.kind === 'sticky') {
+      const st = el('div', 'sticky', comp);
+      st.style.cssText += `left:240px;top:${P.top || 720}px;width:620px;height:620px;transform:rotate(${P.rot ?? -3.5}deg);z-index:5`;
+      for (const line of P.lines) el('div', '', st).textContent = line;
+    }
+    if (s.night) nightLight(comp);
+    if (s.blur) { comp.style.filter = `blur(${s.blur}px) brightness(${s.dim ?? .8})`; comp.style.inset = `-${s.blur * 3}px`; }
+    finish(sl);
+  },
+
+  annot(sl, s) {
+    const comp = el('div', 'cover', sl);
+    surface(comp, s);
+    const src = `_annot/${s.annot}.png`;
+    const o = Object.assign({ w: 800, cx: 540, cy: 930, rot: -3 }, s.place || {});
+    if (s.crop && !s.place) Object.assign(o, { w: 1150, cx: 540, cy: 900, rot: -2 });
+    if (s.focus) { // close-up photo of one region; the rest of the page runs out of frame
+      const [fx, fy, fw, fh] = s.focus, w = (s.focusW || 1150) / (fw / 100);
+      Object.assign(o, { w, rot: -2, cx: 540 + (.5 - (fx + fw / 2) / 100) * w, cy: (s.focusY || 900) + (.5 - (fy + fh / 2) / 100) * w * PAGE_H / PAGE_W });
+    }
+    if (s.crop) o.crop = s.crop;
+    if (s.sleeve) o.sleeve = true;
+    if (s.staple) o.staple = true;
+    if (s.fold) o.fold = true;
+    if (s.stack) o.stack = s.stack;
+    printed(comp, src, o);
+    if (s.night) nightLight(comp);
+    if (s.blur) { comp.style.filter = `blur(${s.blur}px) brightness(${s.dim ?? .8})`; comp.style.inset = `-${s.blur * 3}px`; }
+    finish(sl);
+  },
+
+  exemplar(sl, s) {
+    surface(sl, s);
+    const o = Object.assign({ w: 700, cx: 560, cy: 1030, rot: -9, tilt: 18, stack: 6, shadow: '0 30px 60px rgba(0,0,0,.45), 0 5px 12px rgba(0,0,0,.3)' }, s.place || {});
+    if (s.sleeve) o.sleeve = true;
+    if (s.surface === 'fridge') {
+      Object.assign(o, { w: 720, cx: 470, cy: 960, rot: -1.6, tilt: 0, stack: 2, shadow: '0 16px 30px rgba(0,0,0,.25)' }, s.place || {});
+      childDrawing(sl, { x: 700, y: 360, w: 460, h: 345, rot: 5 });
+      const m2 = el('div', 'magnet', sl); m2.style.cssText += 'left:900px;top:340px;background:radial-gradient(circle at 35% 30%,#ffe98a,#f0b500 60%,#b88400)';
+    }
+    printed(sl, '_annot/cover.png', o);
+    if (s.surface === 'fridge') { const m = el('div', 'magnet', sl); m.style.cssText += `left:${o.cx - 37}px;top:${o.cy - o.w * PAGE_H / PAGE_W / 2 - 20}px;background:radial-gradient(circle at 35% 30%,#ff8a80,#e0302a 60%,#9e1a16)`; }
+    finish(sl);
+  },
+
+  // Sky photo from a window or balcony: gradient sky, soft turbulence clouds, out-of-focus rooftops and trees.
+  sky(sl, s) {
+    const v = s.sky || {}, dusk = v.variant === 'dusk', seed = v.seed || 11, id = 'k' + seed, r = rng(seed);
+    const sky = dusk
+      ? [[0, '#231f4d'], [.3, '#4b3b73'], [.52, '#94507a'], [.68, '#d86f5d'], [.8, '#f39a58'], [1, '#f9c27a']]
+      : [[0, '#101a36'], [.3, '#253a67'], [.52, '#56608d'], [.68, '#b3818a'], [.8, '#eba477'], [1, '#fbd6a0']];
+    const cloud = dusk
+      ? [[0, '#2c2550', .55], [.4, '#6b3f6c', .8], [.62, '#c9616a', .9], [.8, '#ff9d6a', .95]]
+      : [[0, '#161f3f', .5], [.4, '#3f4570', .75], [.64, '#b77783', .88], [.8, '#ffb98a', .92]];
+    const H0 = 1330;
+    let trees = '', houses = '', lights = '';
+    for (let i = 0; i < 16; i++) {
+      const tx = -40 + r() * 1160, ty = H0 - 30 - r() * 150;
+      for (let j = 0; j < 5; j++) trees += `<circle cx="${tx + (r() - .5) * 110}" cy="${ty + (r() - .5) * 70}" r="${34 + r() * 46}"/>`;
+    }
+    let x = -40;
+    while (x < 1120) {
+      const w = 110 + r() * 150, hgt = 30 + r() * 110, top = H0 - hgt;
+      houses += r() < .6 ? `<path d="M${x} ${H0 + 320}V${top}L${x + w / 2} ${top - w * .32}L${x + w} ${top}V${H0 + 320}Z"/>` : `<rect x="${x}" y="${top}" width="${w}" height="${hgt + 320}"/>`;
+      if (r() < .5) houses += `<rect x="${x + w * (.2 + r() * .5)}" y="${top - 30 - r() * 30}" width="18" height="70"/>`;
+      if (r() < .45) lights += `<rect x="${x + 20 + r() * (w - 50)}" y="${top + 30 + r() * 60}" width="16" height="20" fill="#ffc977" opacity="${.35 + r() * .35}"/>`;
+      x += w + (r() < .3 ? 30 + r() * 70 : 0);
+    }
+    el('div', 'cover', sl, `<svg viewBox="0 0 1080 1620" width="1080" height="1620">
+      <defs>
+        <linearGradient id="${id}s" x1="0" y1="0" x2="0" y2="1">${sky.map(([o, c]) => `<stop offset="${o}" stop-color="${c}"/>`).join('')}</linearGradient>
+        <linearGradient id="${id}c" x1="0" y1="0" x2="0" y2="1">${cloud.map(([o, c, a]) => `<stop offset="${o}" stop-color="${c}" stop-opacity="${a}"/>`).join('')}</linearGradient>
+        <radialGradient id="${id}g" cx="${dusk ? .28 : .66}" cy="${H0 / 1620}" r=".6"><stop offset="0" stop-color="#ffe3b3" stop-opacity=".8"/><stop offset=".45" stop-color="#ffcf98" stop-opacity=".2"/><stop offset="1" stop-color="#ffcf98" stop-opacity="0"/></radialGradient>
+        <filter id="${id}n" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".0021 .0095" numOctaves="5" seed="${seed}"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  3.4 0 0 0 -1.5"/><feGaussianBlur stdDeviation="3"/></filter>
+        <mask id="${id}m"><rect width="1080" height="1620" fill="#fff" filter="url(#${id}n)"/></mask>
+        <filter id="${id}b"><feGaussianBlur stdDeviation="3.2"/></filter>
+        <filter id="${id}bb"><feGaussianBlur stdDeviation="5"/></filter>
+      </defs>
+      <rect width="1080" height="1620" fill="url(#${id}s)"/>
+      <rect width="1080" height="1620" fill="url(#${id}g)"/>
+      <rect width="1080" height="1620" fill="url(#${id}c)" mask="url(#${id}m)"/>
+      ${v.moon ? `<g filter="url(#${id}b)" opacity=".85"><circle cx="812" cy="300" r="24" fill="#f5efd9"/><circle cx="824" cy="292" r="22" fill="#162246"/></g>` : ''}
+      <g fill="#1b1c30" filter="url(#${id}bb)">${trees}</g>
+      <g fill="#0e0f1b" filter="url(#${id}b)"><rect x="-20" y="${H0 - 20}" width="1120" height="${1640 - H0}"/>${houses}</g>
+      <g filter="url(#${id}b)">${lights}</g>
+    </svg>`);
+    finish(sl, { grain: .22 });
+  }
+};
+
+window.renderAll = function (data) {
+  const root = document.getElementById('root');
+  data.posts.forEach((post, pi) => post.slides.forEach((s, si) => {
+    const sl = el('div', 'slide', root); sl.dataset.post = pi; sl.dataset.slide = si;
+    BUILD[s.bg](sl, s);
+    const def = s.hook ? (s.hookPos || 'low') : ({ annot: 'head', exemplar: 'head', paper: 'head', chat: 'low', lock: 'mid' }[s.bg] || 'top');
+    text(sl, s, s.textPos || def);
+    if (si === 0) el('div', 'pill', sl).textContent = 'Fiktive Geschichte';
+  }));
+};
+</script>
+</body>
+</html>
